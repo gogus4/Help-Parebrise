@@ -59,6 +59,5 @@
                 <mui:Link DisplayName="Facture" Source="/Views/PrintBill.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-
     </mui:ModernWindow.MenuLinkGroups>
 </mui:ModernWindow>

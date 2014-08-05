@@ -43,10 +43,17 @@ namespace FirstFloor.ModernUI.Windows.Controls
         /// Defines the ContentSource dependency property.
         /// </summary>
         public static readonly DependencyProperty ContentSourceProperty = DependencyProperty.Register("ContentSource", typeof(Uri), typeof(ModernWindow));
+
+        /// <summary>
+        /// Defines the ContentSource dependency property.
+        /// </summary>
+        public static readonly DependencyProperty ContentVersionProperty = DependencyProperty.Register("Version", typeof(string), typeof(ModernWindow));
+
         /// <summary>
         /// Identifies the ContentLoader dependency property.
         /// </summary>
         public static readonly DependencyProperty ContentLoaderProperty = DependencyProperty.Register("ContentLoader", typeof(IContentLoader), typeof(ModernWindow), new PropertyMetadata(new DefaultContentLoader()));
+
 
         private Storyboard backgroundAnimation;
 
@@ -56,6 +63,12 @@ namespace FirstFloor.ModernUI.Windows.Controls
         public ModernWindow()
         {
             this.DefaultStyleKey = typeof(ModernWindow);
+
+            #region VERSION NUMBER
+        
+
+
+            #endregion
 
             // create empty collections
             SetCurrentValue(MenuLinkGroupsProperty, new LinkGroupCollection());
@@ -214,6 +227,15 @@ namespace FirstFloor.ModernUI.Windows.Controls
         {
             get { return (Uri)GetValue(ContentSourceProperty); }
             set { SetValue(ContentSourceProperty, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the source uri of the current content.
+        /// </summary>
+        public string Version
+        {
+            get { return (string)GetValue(ContentVersionProperty); }
+            set { SetValue(ContentVersionProperty, value); }
         }
 
         /// <summary>

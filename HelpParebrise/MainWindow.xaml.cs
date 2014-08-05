@@ -4,6 +4,7 @@ using HelpParebrise.Common;
 using HelpParebrise.Data;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,14 @@ namespace FirstFloor.ModernUI.App
         {
             InitializeComponent();
 
-            //SQLDataHelper.Instance.getInterventions();
+            if (ConfigurationManager.AppSettings["Univers"] != "Production")
+            {
+                IncrementBuildNumber incrementBuildNumber = new IncrementBuildNumber();
+            }
 
+            this.Version = "version " + IncrementBuildNumber.Version;
+
+            // SQLDataHelper.Instance.getInterventions();
         }
     }
 }

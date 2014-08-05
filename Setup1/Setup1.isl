@@ -342,6 +342,7 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>HelpParebrise.Sortie_principale1</td><td>{2BB4ABAD-3EFE-4913-A271-0BC595CB3799}</td><td>INSTALLDIR</td><td>2</td><td/><td>helpparebrise.sortie_princip1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{C9AFCC18-D420-45B2-B9EC-E2EC25565D5D}</td><td>LOGOS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{727BE65E-ADDB-4CFC-9C10-848C8785CE37}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{F56413A4-2164-44A0-9063-FDD5A1D8A285}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1869,6 +1870,7 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>HelpParebrise.Sortie_principale1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>NewComponent1</td></row>
 	</table>
 
@@ -1884,6 +1886,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
+		<row><td>assemblyinfo_previous.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>ASSEMB~1.TXT|assemblyInfo_previous.txt</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Diego\Documents\GitHub\Help-Parebrise\HelpParebrise\bin\Debug\assemblyInfo_previous.txt</td><td>1</td><td/></row>
 		<row><td>euro.png</td><td>ISX_DEFAULTCOMPONENT</td><td>euro.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\logos\euro.png</td><td>1</td><td/></row>
 		<row><td>eurobold.png</td><td>ISX_DEFAULTCOMPONENT</td><td>euroBold.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\logos\euroBold.png</td><td>1</td><td/></row>
 		<row><td>help_parebrise.png</td><td>ISX_DEFAULTCOMPONENT</td><td>HELP_P~1.PNG|help_parebrise.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\logos\help_parebrise.png</td><td>1</td><td/></row>
@@ -2034,6 +2037,7 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>HelpParebrise.Sortie_principale1</td><td/><td/><td>_BC170470_DD37_4A00_9F6F_DB9C6ED379AC_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_D55AF1EA_61B1_4825_B9C4_154AB1090B48_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_B8B7BA74_383B_4FF3_B6F3_0A2CA92BAFC0_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_E1DD9D9A_399C_459D_B350_1EAA0AC421B7_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 

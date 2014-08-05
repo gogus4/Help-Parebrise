@@ -39,7 +39,7 @@
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="*" />
-                                            <RowDefinition Height="15" />
+                                            <RowDefinition Height="60" />
                                         </Grid.RowDefinitions>
                                         
                                         <!--<Grid.ColumnDefinitions>
@@ -70,7 +70,7 @@
                                             </TextBlock>
                                         </Border>
 
-                                        <StackPanel Grid.Row="0" Grid.RowSpan="2" Margin="770,10,0,0">
+                                        <StackPanel Grid.Row="0" Grid.RowSpan="2" Orientation="Vertical" Margin="770,10,0,0">
                                             <Image Source="/FirstFloor.ModernUI;component/Assets/elm.png" Width="180" Height="90"/>
                                         </StackPanel>
 
@@ -146,8 +146,11 @@
                                                                WindowChrome.IsHitTestVisibleInChrome="True" >
                                         </controls:ModernButton>
 
+                                        
                                         <!-- content frame -->
                                         <controls:ModernFrame x:Name="ContentFrame" Grid.Row="3" Grid.RowSpan="2" Margin="36,8,16,16" Source="{Binding ContentSource, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" ContentLoader="{TemplateBinding ContentLoader}"/>
+
+                                        <TextBlock x:Name="Version" Text="{Binding Version, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" FontSize="10" HorizontalAlignment="Right" Grid.Row="4" Margin="0,35,20,0"/>
 
                                         <!-- resize grip -->
                                         <Grid Grid.Row="4">
