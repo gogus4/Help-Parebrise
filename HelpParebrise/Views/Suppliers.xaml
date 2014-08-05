@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="HelpParebrise.Views.Suppliers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI" 
+             mc:Ignorable="d">
+
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.RowSpan="3"  x:Name="GridProgressRing" Visibility="Visible" Grid.ColumnSpan="3" Background="White" Panel.ZIndex="1">
+            <mui:ModernProgressRing  HorizontalAlignment="Center" Foreground="#FFE20013" VerticalAlignment="Center" IsActive="True"  Width="80" Height="80" Style="{Binding SelectedItem.Tag, ElementName=CmbRingStyle}" />
+        </Grid>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.4*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Text="CONSULTER" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+                <DataGrid Name="suppliersDataGrid" Margin="0,40,0,0" Height="300" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" SelectionChanged="stockDataGrid_SelectionChanged" >
+                    <DataGrid.Columns>
+                        <mui:DataGridTextColumn Header="Nom"  Binding="{Binding nom}"/>
+                        <mui:DataGridTextColumn Header="Adresse" Binding="{Binding adresse}" />
+                        <mui:DataGridTextColumn Header="Numéro de téléphone" Binding="{Binding numero_telephone}" />
+                        <mui:DataGridTextColumn Header="En cours" Binding="{Binding en_cours}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+            <StackPanel x:Name="UpdateStackPanel" Grid.Row="1" Margin="0,20,0,0" Visibility="Collapsed" Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal" />
+                        <Setter Property="Margin" Value="0,0,0,5" />
+                    </Style>
+
+                    <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                        <Setter Property="Width" Value="90" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <TextBlock Text="Modification" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nom" />
+                    <TextBox x:Name="Name" Text="{Binding nom}" Width="150" />
+
+                    <Label Content="Adresse" Margin="20,0,0,0"/>
+                    <TextBox x:Name="Address" Text="{Binding adresse}" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Numéro de tel" />
+                    <TextBox x:Name="NumTel" Text="{Binding numero_telephone}" Width="150" />
+
+                    <Label Content="Adresse email" Margin="20,0,0,0"/>
+                    <TextBox x:Name="AddrEmail" Text="{Binding adresse_email}" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Numero fax" />
+                    <TextBox x:Name="NumFax" Text="{Binding numero_fax}" Width="150" />
+
+                    <Label Content="En cours" Margin="20,0,0,0"/>
+                    <TextBox x:Name="EnCours" Text="{Binding en_cours}" Width="150" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Update" Content="Modifier" Margin="0,5,0,0" Click="Update_Click" />
+                    <Button x:Name="Delete" Content="Supprimer" Margin="5,5,0,0" Click="Delete_Click" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <TextBlock Text="AJOUTER UN FOURNISSEUR" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel x:Name="AddStackPanel" Grid.Row="1" Margin="0,40,0,0" Visibility="Visible" Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal" />
+                        <Setter Property="Margin" Value="0,0,0,5" />
+                    </Style>
+
+                    <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                        <Setter Property="Width" Value="150" />
+                        <Setter Property="VerticalAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nom" />
+                    <TextBox x:Name="NameAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Adresse" />
+                    <TextBox x:Name="AddrAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Numéro de téléphone" />
+                    <TextBox x:Name="NumTelAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Adresse email" />
+                    <TextBox x:Name="AddrEmailAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Numéro de fax" />
+                    <TextBox x:Name="NumFaxAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="En cours" />
+                    <TextBox x:Name="EnCoursAdd" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label />
+                    <Button x:Name="Add" Content="Ajouter" Margin="0,5,0,0" Click="Add_Click" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

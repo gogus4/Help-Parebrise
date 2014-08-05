@@ -1,0 +1,197 @@
+﻿<mui:ModernDialog x:Class="HelpParebrise.Views.AddInterventionCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Ajouter une intervention">
+
+    <Grid Style="{StaticResource ContentRoot}" x:Name="DataInterventionGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="GridProgressRing" Grid.ColumnSpan="3" Visibility="Collapsed" Background="White" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <mui:ModernProgressRing  IsActive="True" Width="80" Foreground="#FFE20013" Height="80" Style="{Binding SelectedItem.Tag, ElementName=CmbRingStyle}" />
+        </Grid>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="DONNEES INTERVENTION" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date de l'intervention" />
+                <DatePicker x:Name="DateIntervention" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date facture" />
+                <DatePicker x:Name="DateFacture" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de la facture" />
+                <TextBox x:Name="NumFacture" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Adresse de l'intervention" />
+                <TextBox x:Name="AdresseIntervention" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prix HT" />
+                <TextBox x:Name="PriceHT" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prix TTC" />
+                <TextBox x:Name="PriceTTC" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="TVA" />
+                <ComboBox x:Name="ComboListTauxTVA" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding valeur_tva}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Acompte" />
+                <TextBox x:Name="acompte" Width="150" Text="{Binding Acompte}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Remise" />
+                <TextBox x:Name="remise" Width="150" Text="{Binding Remise}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Franchise" />
+                <TextBox x:Name="franchise" Width="150" Text="{Binding Franchise}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prestation" />
+                <ComboBox x:Name="ComboListTypePrestation" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding designation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Mode de paiement" />
+                <ComboBox x:Name="ComboListModesPaiement" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding designation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date du sinistre" />
+                <DatePicker x:Name="DateSinistre" Width="150" Text="{Binding DateSinistre}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cause du sinistre" />
+                <TextBox x:Name="CauseSinistre" Width="150" Text="{Binding CauseSinistre}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Add" Content="Ajouter" HorizontalAlignment="Left" Margin="0,10,0,0" Click="Add_Click"/>
+                <Button x:Name="AddVehicle" Content="Ajouter un véhicule" HorizontalAlignment="Left" Margin="10,10,0,0" Click="AddVehicle_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="DataVehiculeStackPanel" Grid.Column="1" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="DONNEES VEHICULE" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Liste des véhicules " />
+                <ComboBox x:Name="ComboListVehicules" Width="150" SelectionChanged="ComboListVehicules_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding immatriculation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Marque" />
+                <TextBox x:Name="marqueVehicule" Width="150" IsReadOnly="True" Text="{Binding marque}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Modèle" />
+                <TextBox x:Name="modeleVehicule" Width="150" IsReadOnly="True" Text="{Binding modele}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date mise en service" />
+                <TextBox x:Name="dateMESVehicule" Width="150" IsReadOnly="True" Text="{Binding date_mise_en_service}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Immatriculation" />
+                <TextBox x:Name="immatriculationVehicule" IsReadOnly="True" Width="150" Text="{Binding immatriculation}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de série" />
+                <TextBox x:Name="numSerieVehicule" IsReadOnly="True" Width="150" Text="{Binding numero_serie}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Type de véhicule" />
+                <TextBox x:Name="TypeVehicule" IsReadOnly="True" Width="150" Text="{Binding type_vehicule}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Kilométrage" />
+                <TextBox x:Name="kmVehicule" IsReadOnly="True" Width="150" Text="{Binding kilometrage}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</mui:ModernDialog>

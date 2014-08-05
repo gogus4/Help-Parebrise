@@ -1,0 +1,264 @@
+﻿<mui:ModernDialog x:Class="HelpParebrise.Views.UpdateInterventionCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Modifier une intervention">
+
+    <Grid Style="{StaticResource ContentRoot}" x:Name="DataInterventionGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="GridProgressRing" Grid.ColumnSpan="3" Visibility="Collapsed" Background="White" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <mui:ModernProgressRing  IsActive="True" Width="80" Foreground="#FFE20013" Height="80" Style="{Binding SelectedItem.Tag, ElementName=CmbRingStyle}" />
+        </Grid>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="DONNEES INTERVENTION" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numero" />
+                <TextBox x:Name="NumIntervention" Text="{Binding indice_intervention}" IsReadOnly="True" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date de l'intervention" />
+                <DatePicker x:Name="DateIntervention" Width="150" Text="{Binding date_intervention}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date facture" />
+                <DatePicker x:Name="DateFacture" Width="150" Text="{Binding date_facture}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Adresse de l'intervention" />
+                <TextBox x:Name="AdresseIntervention" Width="150" Text="{Binding adresse_intervention}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de la facture" />
+                <TextBox x:Name="NumFacture" Width="150" Text="{Binding numero_facture}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prix HT" />
+                <TextBox x:Name="PriceHT" Width="150" Text="{Binding prix_HT}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prix TTC" />
+                <TextBox x:Name="PriceTTC" Width="150" Text="{Binding prix_TTC}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="TVA" />
+                <ComboBox x:Name="ComboListTauxTva" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding valeur_tva}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Acompte" />
+                <TextBox x:Name="acompte" Width="150" Text="{Binding acompte}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Remise" />
+                <TextBox x:Name="remise" Width="150" Text="{Binding remise}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Franchise" />
+                <TextBox x:Name="franchise" Width="150" Text="{Binding franchise}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prestation" />
+                <ComboBox x:Name="ComboListTypePrestation" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding designation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Mode de paiement" />
+                <ComboBox x:Name="ComboListModesPaiement" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding designation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date du sinistre" />
+                <DatePicker x:Name="DateSinistre" Width="150" Text="{Binding date_sinistre}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Cause du sinistre" />
+                <TextBox x:Name="CauseSinistre" Width="150" Text="{Binding cause_sinistre}"/>
+            </StackPanel>
+
+            <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Update_Click" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20,0,0,0" x:Name="VehiculeDataContext">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="DONNEES VEHICULE" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Marque" />
+                <TextBox x:Name="marqueVehicule" Width="150" IsReadOnly="True" Text="{Binding marque}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Modèle" />
+                <TextBox x:Name="modeleVehicule" Width="150" IsReadOnly="True" Text="{Binding modele}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date mise en service" />
+                <TextBox x:Name="dateMESVehicule" Width="150" IsReadOnly="True" Text="{Binding date_mise_en_service}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Immatriculation" />
+                <TextBox x:Name="immatriculationVehicule" IsReadOnly="True" Width="150" Text="{Binding immatriculation}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de série" />
+                <TextBox x:Name="numSerieVehicule" IsReadOnly="True" Width="150" Text="{Binding numero_serie}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Type de véhicule" />
+                <TextBox x:Name="TypeVehicule" IsReadOnly="True" Width="150" Text="{Binding type_vehicule}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Kilométrage" />
+                <TextBox x:Name="kmVehicule" IsReadOnly="True" Width="150" Text="{Binding kilometrage}"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="Ajouter une pièce" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Liste des pièces" />
+                <ComboBox x:Name="ComboListPieces" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding reference}"/>
+                                <Run Text=" : "/>
+                                <Run Text="{Binding designation}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Quantite" />
+                <TextBox x:Name="QuantitePieceIntervention" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Remise" />
+                <TextBox x:Name="RemisePieceIntervention" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="CreatePiece" Content="Créer une pièce" HorizontalAlignment="Left" Margin="0,20,0,0" Click="CreatePiece_Click" />
+                <Button x:Name="AddPiece" Content="Ajouter la pièce" HorizontalAlignment="Left" Margin="10,20,0,0" Click="AddPiece_Click" />
+            </StackPanel>
+
+            <TextBlock Text="Liste des pièces utilisées" Style="{StaticResource Heading2}" Margin="0,10,0,15" />
+
+            <DataGrid Name="pieceInterventionDataGrid" Height="150" Grid.Row="0" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" SelectionChanged="pieceInterventionDataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <mui:DataGridTextColumn Header="Référence"  Binding="{Binding reference}" />
+                    <mui:DataGridTextColumn Header="Remise" Binding="{Binding remise}" />
+                    <mui:DataGridTextColumn Header="Quantite" Binding="{Binding quantite}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            <StackPanel x:Name="PieceInterventionStackPanel" Visibility="Collapsed" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Référence" />
+                    <TextBox x:Name="refPieceInter" IsEnabled="False" Text="{Binding reference}" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Remise" />
+                    <TextBox x:Name="RemisePieceInter" Text="{Binding remise}" Width="150" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Quantite" />
+                    <TextBox x:Name="quantitePieceInter" Text="{Binding quantite}" Width="150" />
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="UpdatePieceIntervention" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="UpdatePieceIntervention_Click" />
+                    <Button x:Name="DeletePieceIntervention" Content="Supprimer" HorizontalAlignment="Left" Margin="10,20,0,0" Click="DeletePieceIntervention_Click" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</mui:ModernDialog>

@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="HelpParebrise.Views.AddVehicle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI" 
+             mc:Ignorable="d">
+
+    <Grid Style="{StaticResource ContentRoot}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Text="DONNEES VEHICULE" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Marque" />
+                <TextBox x:Name="Marque" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Modèle" />
+                <TextBox x:Name="Modele" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date de mise en service" />
+                <DatePicker x:Name="dateMES" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Immatriculation" />
+                <TextBox x:Name="Immatriculation" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de série" />
+                <TextBox x:Name="numSerie" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Type de véhicule" />
+                <TextBox x:Name="TypeVehicule" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Kilométrage" />
+                <TextBox x:Name="kilometrage" Width="150" />
+            </StackPanel>
+
+            <Button x:Name="Add" Content="Ajouter" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Add_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

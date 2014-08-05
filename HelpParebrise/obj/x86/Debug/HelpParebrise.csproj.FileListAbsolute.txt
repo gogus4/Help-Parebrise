@@ -1,0 +1,382 @@
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe.config
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\App.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.cache
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.g.resources
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.Properties.Resources.resources
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csproj.GenerateResource.Cache
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.pdb
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.add.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.adobe.bridge.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.collapsed.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.corner.up.right.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.down.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.expand.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.box.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.off.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.club.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.diamond.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.heart.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.spade.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.check.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.HelloKitty.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Love.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Snowflakes.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\View\Suppliers.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\View\Suppliers.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.lref
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.BingImage.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.baml
+C:\Users\Diego\Documents\Visual Studio 2010\Projects\HelpParebrise\HelpParebrise\obj\x86\Debug\App.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe.config
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.pdb
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.add.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.adobe.bridge.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.collapsed.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.corner.up.right.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.down.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.expand.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.box.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.off.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.club.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.diamond.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.heart.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.spade.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.check.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.HelloKitty.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Love.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Snowflakes.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInterventionCustomer.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\UpdateInterventionCustomer.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddCustomer.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddStock.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInsurance.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Suppliers.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Stock.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Insurances.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\App.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInterventionCustomer.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\UpdateInterventionCustomer.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddCustomer.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddStock.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInsurance.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Customers.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Suppliers.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Stock.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Insurances.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\App.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.cache
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.lref
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.BingImage.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Customers.baml
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.g.resources
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.Properties.Resources.resources
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csproj.GenerateResource.Cache
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.exe.config
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\MySql.Data.dll
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\sharpPDF.dll
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.pdb
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.add.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.adobe.bridge.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.collapsed.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.corner.up.right.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.down.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.arrow.expand.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.box.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.off.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.flash.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.camera.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.club.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.diamond.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.heart.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.cards.spade.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\appbar.check.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.HelloKitty.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Love.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.Snowflakes.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateInsurance.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateContact.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreatePiece.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddVehicle.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Contacts.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Vehicle.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\PrintBill.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInterventionCustomer.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\UpdateInterventionCustomer.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddCustomer.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddStock.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInsurance.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Suppliers.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Stock.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Insurances.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\App.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderIntro.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernBBCodeBlock.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernButton.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernDialog.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernFrame.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernMenu.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernProgressRing.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsModernWindow.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesButton.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDate.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesItemsControl.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesProgressBar.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSlider.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesText.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsum.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\CancelNavigateSample.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\ErrorSample.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ModernFrame\Sample.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\SettingsAppearance.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsModern.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ControlsStyles.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Introduction.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutTab.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutWireframe.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Settings.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateInsurance.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateContact.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreatePiece.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddVehicle.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Contacts.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Vehicle.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\PrintBill.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInterventionCustomer.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\UpdateInterventionCustomer.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddCustomer.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddStock.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\AddInsurance.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Customers.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Suppliers.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Stock.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Insurances.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\App.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.cache
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise_MarkupCompile.lref
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Assets\ModernUI.BingImage.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ContentLoaderImages.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesDataGrid.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\ControlsStylesSampleForm.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumList.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Content\LoremIpsumSplit.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\ContentLoader.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutBasic.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutList.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\LayoutSplit.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Pages\Navigation.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Customers.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.g.resources
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.Properties.Resources.resources
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.csproj.GenerateResource.Cache
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.exe
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\HelpParebrise.pdb
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateVehicle.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\CreateVehicle.g.cs
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Pieces.baml
+C:\Users\Diego\Documents\depot\HelpParebrise\HelpParebrise\obj\x86\Debug\Views\Pieces.g.cs

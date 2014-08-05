@@ -1,0 +1,64 @@
+﻿<mui:ModernWindow x:Class="FirstFloor.ModernUI.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Help Parebrise" IsTitleVisible="True"
+        ContentSource="/Views/Customers.xaml"
+        Icon="Assets/icon.ico"
+        Width="1100" Height="700" WindowStartupLocation="CenterScreen">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="Clients">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Consulter / Modifier" Source="/Views/Customers.xaml" />
+                <mui:Link DisplayName="Ajouter" Source="/Views/AddCustomer.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>   
+        
+        <mui:LinkGroup DisplayName="Stock">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Consulter / Modifier" Source="/Views/Stock.xaml" />
+                <mui:Link DisplayName="Ajouter une pièce" Source="/Views/AddStock.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        
+        <mui:LinkGroup DisplayName="Assurances">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Consulter / Modifier" Source="/Views/Insurances.xaml" />
+                <mui:Link DisplayName="Ajouter" Source="/Views/AddInsurance.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Véhicules">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Consulter / Modifier" Source="/Views/Vehicle.xaml" />
+                <mui:Link DisplayName="Ajouter" Source="/Views/AddVehicle.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        
+        <mui:LinkGroup DisplayName="Fournisseurs">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="" Source="/Views/Suppliers.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        
+        <mui:LinkGroup DisplayName="Contacts">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="" Source="/Views/Contacts.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Pièces">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="" Source="/Views/Pieces.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+        <mui:LinkGroup DisplayName="Impression">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Facture" Source="/Views/PrintBill.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>
