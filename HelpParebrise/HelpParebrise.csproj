@@ -152,6 +152,7 @@
     <Compile Include="FlickrImageLoader.cs" />
     <Compile Include="IncrementBuildNumber.cs" />
     <Compile Include="LoremIpsumLoader.cs" />
+    <Compile Include="Model\PhotosIntervention.cs" />
     <Compile Include="Model\Assurance.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Contact.cs" />
@@ -169,6 +170,7 @@
     <Compile Include="SampleMsgBoxCommand.cs" />
     <Compile Include="SampleParameterCommand.cs" />
     <Compile Include="ViewModel\ModePaiementVM.cs" />
+    <Compile Include="ViewModel\PhotosInterventionVM.cs" />
     <Compile Include="ViewModel\PieceInterventionVM.cs" />
     <Compile Include="ViewModel\ContactVM.cs" />
     <Compile Include="ViewModel\TypePrestationVM.cs" />
@@ -181,6 +183,7 @@
     <Compile Include="ViewModel\StockVM.cs" />
     <Compile Include="ViewModel\ContactsVM.cs" />
     <Compile Include="ViewModel\InsuranceVM.cs" />
+    <Compile Include="Views\PictureBox.cs" />
     <Compile Include="Views\Pieces.xaml.cs">
       <DependentUpon>Pieces.xaml</DependentUpon>
     </Compile>

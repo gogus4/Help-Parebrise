@@ -1166,5 +1166,61 @@ namespace HelpParebrise.Data
         }
 
         #endregion
+
+        #region PHOTOS INTERVENTION
+
+        public async Task<ObservableCollection<PhotosIntervention>> getPictures()
+        {
+            ObservableCollection<PhotosIntervention> _pictures = new ObservableCollection<PhotosIntervention>();
+
+            try
+            {
+                string query = "SELECT * FROM photos_intervention";
+                await OpenConnection();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    _pictures.Add(new PhotosIntervention()
+                    {
+                        indice_intervention = int.Parse(dataReader["indice_intervention"].ToString()),
+                        indice_photo = int.Parse(dataReader["indice_photo"].ToString()),
+                        lien = dataReader["lien"].ToString()
+                    });
+                }
+
+                dataReader.Close();
+                CloseConnection();
+            }
+            catch (Exception E) { }
+
+            return _pictures;
+        }
+
+        public async Task<bool> insertPicture(PhotosIntervention _picture)
+        {
+            try
+            {
+                string query = "INSERT INTO photos_intervention(indice_intervention,lien) VALUES(@indice_intervention,@lien)";
+                await OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Prepare();
+
+                cmd.Parameters.Add("@indice_intervention", _picture.indice_intervention);
+                cmd.Parameters.Add("@lien", _picture.lien);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        #endregion
     }
 }

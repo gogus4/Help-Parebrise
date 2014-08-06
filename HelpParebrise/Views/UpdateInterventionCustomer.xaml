@@ -11,11 +11,62 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="PicturesIntervention" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="3" Margin="5,-30,0,0">
+            <StackPanel Orientation="Vertical">              
+                <TextBlock Text="Photos de l'interventions :" FontSize="12"/>
+                
+                <ListView x:Name="listviewImagesIntervention" Width="1000" HorizontalAlignment="Left" VerticalAlignment="Stretch" BorderThickness="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" SelectionMode="Single" MouseDoubleClick="listviewImagesIntervention_MouseDoubleClick">
+                    <ListView.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.Panel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" />
+                                </ItemsPanelTemplate>
+                            </GroupStyle.Panel>
+                            <GroupStyle.ContainerStyle>
+                                <Style TargetType="{x:Type GroupItem}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="GroupItem">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <ContentPresenter Margin="0,0,0,0" VerticalAlignment="Center" />
+                                                    <ItemsPresenter Margin="0,0,0,0" VerticalAlignment="Center"/>
+                                                </StackPanel>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </GroupStyle.ContainerStyle>
+                        </GroupStyle>
+                    </ListView.GroupStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="100" Height="100" VerticalAlignment="Center" >
+                                <Image Source="{Binding lien}" Width="100" Height="100" Stretch="Fill"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Grid>
+
+
         <Grid x:Name="GridProgressRing" Grid.ColumnSpan="3" Visibility="Collapsed" Background="White" Panel.ZIndex="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <mui:ModernProgressRing  IsActive="True" Width="80" Foreground="#FFE20013" Height="80" Style="{Binding SelectedItem.Tag, ElementName=CmbRingStyle}" />
         </Grid>
 
-        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="20,0,0,0">
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Vertical" Margin="20,0,0,0">
             <StackPanel.Resources>
                 <Style TargetType="StackPanel">
                     <Setter Property="Orientation" Value="Horizontal" />
@@ -129,10 +180,13 @@
                 <TextBox x:Name="CauseSinistre" Width="150" Text="{Binding cause_sinistre}"/>
             </StackPanel>
 
-            <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Update_Click" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Update_Click" />
+                <Button x:Name="AddPicture" Content="Ajouter une photo" HorizontalAlignment="Left" Margin="5,20,0,0" Click="AddPicture_Click" />
+            </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20,0,0,0" x:Name="VehiculeDataContext">
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Vertical" Margin="20,0,0,0" x:Name="VehiculeDataContext">
             <StackPanel.Resources>
                 <Style TargetType="StackPanel">
                     <Setter Property="Orientation" Value="Horizontal" />
@@ -183,7 +237,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="2" Orientation="Vertical" Margin="20,0,0,0">
+        <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Vertical" Margin="20,0,0,0">
             <StackPanel.Resources>
                 <Style TargetType="StackPanel">
                     <Setter Property="Orientation" Value="Horizontal" />
@@ -237,7 +291,7 @@
                     <mui:DataGridTextColumn Header="Quantite" Binding="{Binding quantite}" />
                 </DataGrid.Columns>
             </DataGrid>
-            
+
             <StackPanel x:Name="PieceInterventionStackPanel" Visibility="Collapsed" Orientation="Vertical">
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Référence" />
@@ -253,12 +307,23 @@
                     <Label Content="Quantite" />
                     <TextBox x:Name="quantitePieceInter" Text="{Binding quantite}" Width="150" />
                 </StackPanel>
-                
+
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="UpdatePieceIntervention" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="UpdatePieceIntervention_Click" />
                     <Button x:Name="DeletePieceIntervention" Content="Supprimer" HorizontalAlignment="Left" Margin="10,20,0,0" Click="DeletePieceIntervention_Click" />
                 </StackPanel>
             </StackPanel>
         </StackPanel>
+
+        <Grid x:Name="popup" Panel.ZIndex="100" Grid.RowSpan="3" Visibility="Collapsed" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image x:Name="imagePopup" Grid.Row="0"/>
+
+            <Button Grid.Row="1" x:Name="ClosePopup" Content="Fermer" Foreground="Black" FontSize="14" Click="ClosePopup_Click"/>
+        </Grid>
     </Grid>
 </mui:ModernDialog>

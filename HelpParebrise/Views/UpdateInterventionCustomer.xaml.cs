@@ -2,11 +2,14 @@
 using HelpParebrise.Data;
 using HelpParebrise.Model;
 using HelpParebrise.ViewModel;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -54,12 +57,19 @@ namespace HelpParebrise.Views
             ModePaiementVM.Instance.getModesPaiement();
             TvaVM.Instance.getTva();
             VehiculeVM.Instance.getVehicules();
+            PhotosInterventionVM.Instance.getPhotosIntervention();
         }
 
         void LoadDataComplete(object sender, RunWorkerCompletedEventArgs e)
         {
             try
             {
+                if (PhotosInterventionVM.Instance.PhotosIntervention.Where(x => x.indice_intervention == intervention.indice_intervention).ToList().Count != 0)
+                {
+                    PicturesIntervention.Visibility = Visibility.Visible;
+                    listviewImagesIntervention.ItemsSource = PhotosInterventionVM.Instance.PhotosIntervention.Where(x => x.indice_intervention == intervention.indice_intervention);
+                }
+
                 ComboListPieces.ItemsSource = PieceVM.Instance.Pieces;
                 VehiculeDataContext.DataContext = VehiculeVM.Instance.Vehicules.Where(x => x.indice_vehicule == intervention.indice_vehicule).FirstOrDefault();
 
@@ -99,7 +109,7 @@ namespace HelpParebrise.Views
                 ModernDialog.ShowMessage(result[1], result[0], btn);
                 this.Close();
             }
-            catch (Exception E) { }
+            catch (Exception E) { Debug.Write(E.Message); }
         }
 
         private async void AddPiece_Click(object sender, RoutedEventArgs e)
@@ -131,7 +141,7 @@ namespace HelpParebrise.Views
                 CreatePiece createPiece = new CreatePiece(); ;
                 createPiece.Show();
             }
-            catch (Exception E) { }
+            catch (Exception E) { Debug.Write(E.Message); }
         }
 
         private async void UpdatePieceIntervention_Click(object sender, RoutedEventArgs e)
@@ -153,6 +163,75 @@ namespace HelpParebrise.Views
 
             PieceInterventionVM.Instance.getPiecesIntervention();
             pieceInterventionDataGrid.ItemsSource = PieceInterventionVM.Instance.PiecesIntervention.Where(x => x.indice_intervention == intervention.indice_intervention);
+        }
+
+        private void listviewImagesIntervention_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            popup.Visibility = Visibility.Visible;
+
+            PhotosIntervention _picture = (PhotosIntervention)listviewImagesIntervention.SelectedItem;
+
+            var bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(_picture.lien); ;
+            bitmapImage.EndInit();
+
+            imagePopup.Source = bitmapImage;
+        }
+
+        private void ClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            popup.Visibility = Visibility.Collapsed;
+        }
+
+        private async void AddPicture_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openfile = new OpenFileDialog();
+                openfile.DefaultExt = "*.jpg";
+                openfile.Filter = "Image Files|*.jpg";
+                Nullable<bool> result = openfile.ShowDialog();
+                if (result == true)
+                {
+                    FtpWebRequest ftpClient = (FtpWebRequest)FtpWebRequest.Create("ftp://92.222.162.33/help_parebrise/" + openfile.SafeFileName);
+                    ftpClient.Credentials = new System.Net.NetworkCredential("help_parebrise", "help_parebrise");
+                    ftpClient.Method = System.Net.WebRequestMethods.Ftp.UploadFile;
+                    ftpClient.UseBinary = true;
+                    ftpClient.KeepAlive = true;
+                    System.IO.FileInfo fi = new System.IO.FileInfo(openfile.FileName);
+                    ftpClient.ContentLength = fi.Length;
+                    byte[] buffer = new byte[4097];
+                    int bytes = 0;
+                    int total_bytes = (int)fi.Length;
+                    System.IO.FileStream fs = fi.OpenRead();
+                    System.IO.Stream rs = ftpClient.GetRequestStream();
+                    while (total_bytes > 0)
+                    {
+                        bytes = fs.Read(buffer, 0, buffer.Length);
+                        rs.Write(buffer, 0, bytes);
+                        total_bytes = total_bytes - bytes;
+                    }
+                    fs.Close();
+                    rs.Close();
+
+                    FtpWebResponse uploadResponse = (FtpWebResponse)ftpClient.GetResponse();
+                    string value = uploadResponse.StatusDescription;
+                    uploadResponse.Close();
+
+                    Intervention inter = (Intervention)DataInterventionGrid.DataContext;
+                    await PhotosInterventionVM.Instance.insertPhotosIntervention(new PhotosIntervention() { lien = "http://92.222.162.33/help_parebrise/" + openfile.SafeFileName, indice_intervention = inter.indice_intervention });
+
+                    #region THREAD
+                    BackgroundWorker _backgroundWorker = new BackgroundWorker();
+
+                    _backgroundWorker.DoWork += LoadData;
+                    _backgroundWorker.RunWorkerCompleted += LoadDataComplete;
+                    _backgroundWorker.RunWorkerAsync(5000);
+                    #endregion
+                }
+            }
+            catch (Exception E) { Debug.Write(E.Message); }
         }
     }
 }
