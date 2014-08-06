@@ -33,6 +33,11 @@ namespace FirstFloor.ModernUI.App
                 IncrementBuildNumber incrementBuildNumber = new IncrementBuildNumber();
             }
 
+            else
+            {
+                IncrementBuildNumber.Version = ConfigurationManager.AppSettings["Version"];
+            }
+
             this.Version = "version " + IncrementBuildNumber.Version;
 
             // SQLDataHelper.Instance.getInterventions();
