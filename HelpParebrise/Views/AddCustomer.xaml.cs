@@ -98,6 +98,8 @@ namespace HelpParebrise.Views
                              select c).ToList();
 
                 Customers.Instance.interventionsDataGrid.ItemsSource = inter;
+
+                Customers.Instance.displayNumberCustomers.Text = CustomerVM.Instance.Customers.Count + " clients enregistrés";
             }
         }
 

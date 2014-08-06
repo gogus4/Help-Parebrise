@@ -5,7 +5,7 @@
         Title="Help Parebrise" IsTitleVisible="True"
         ContentSource="/Views/Customers.xaml"
         Icon="Assets/icon.ico"
-        Width="1100" Height="700" WindowStartupLocation="CenterScreen">
+        Width="1100" Height="730" WindowStartupLocation="CenterScreen">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Clients">

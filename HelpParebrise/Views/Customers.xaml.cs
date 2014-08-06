@@ -1,5 +1,6 @@
 ﻿using FirstFloor.ModernUI.Windows.Controls;
 using HelpParebrise.Common;
+using HelpParebrise.Data;
 using HelpParebrise.Model;
 using HelpParebrise.ViewModel;
 using System;
@@ -64,6 +65,8 @@ namespace HelpParebrise.Views
 
                 interventionsDataGrid.ItemsSource = inter;
             }
+
+            displayNumberCustomers.Text = CustomerVM.Instance.Customers.Count + " clients enregistrés";
         }
 
         private void SearchCustomers_TextChanged(object sender, TextChangedEventArgs e)
@@ -160,27 +163,6 @@ namespace HelpParebrise.Views
             catch (Exception E) { }
         }
 
-        /*private void Refresh_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                CustomerVM.Instance.getCustomers();
-                listCustomers.ItemsSource = CustomerVM.Instance.Customers;
-                InterventionVM.Instance.getInterventions();
-                Client customer = (Client)listCustomers.SelectedItem;
-
-                var inter = (from c in InterventionVM.Instance.Interventions
-                             where c.indice_client == customer.indice_client
-                             select c).ToList();
-
-                if (inter.Count > 0)
-                    interventionsDataGrid.Visibility = Visibility.Visible;
-
-                interventionsDataGrid.ItemsSource = inter;
-            }
-            catch (Exception E) { }
-        }*/
-
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -197,6 +179,27 @@ namespace HelpParebrise.Views
                 interventionsDataGrid.ItemsSource = interSelected;
             }
             catch (Exception E) { }
+        }
+
+        private async void deleteCustomer(object sender, RoutedEventArgs e)
+        {
+            Client customer = (Client)listCustomers.SelectedItem;
+
+            MessageBoxButton btn = MessageBoxButton.YesNo;
+            var result = ModernDialog.ShowMessage("Etes-vous sur de vouloir supprimer le client " + customer.nom , "Suppression du client " + customer.nom, btn);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                await SQLDataHelper.Instance.deleteCustomer(customer);
+
+                #region THREAD
+                BackgroundWorker _backgroundWorker = new BackgroundWorker();
+
+                _backgroundWorker.DoWork += LoadCustomersData;
+                _backgroundWorker.RunWorkerCompleted += LoadCustomersDataComplete;
+                _backgroundWorker.RunWorkerAsync(5000);
+                #endregion
+            }
         }
     }
 }

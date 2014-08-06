@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Cancel" xml:space="preserve">
-    <value>cancel</value>
+    <value>Annuler</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Fermer</value>
@@ -139,7 +139,7 @@
     <value>Unable to navigate to {0}, no source specified</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>no</value>
+    <value>Non</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>ok</value>
@@ -157,6 +157,6 @@
     <value>Unknown token type</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>yes</value>
+    <value>Oui</value>
   </data>
 </root>

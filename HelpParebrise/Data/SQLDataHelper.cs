@@ -1,4 +1,5 @@
-﻿using HelpParebrise.Model;
+﻿using FirstFloor.ModernUI.App.Content;
+using HelpParebrise.Model;
 using HelpParebrise.ViewModel;
 using MySql.Data.MySqlClient;
 using System;
@@ -115,6 +116,35 @@ namespace HelpParebrise.Data
             catch (Exception E) { }
 
             return _interventions;
+        }
+
+        public async Task<bool> deleteIntervention(Intervention _intervention)
+        {
+            try
+            {
+                var pieces_intervention = PieceInterventionVM.Instance.PiecesIntervention.Where(x => x.indice_intervention == _intervention.indice_intervention);
+
+                foreach (PieceIntervention piece_inter in pieces_intervention)
+                {
+                    await SQLDataHelper.Instance.deletePieceIntervention(piece_inter);
+                }
+
+                string query = "DELETE FROM intervention WHERE indice_intervention = @indice_intervention";
+                await OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Prepare();
+
+                cmd.Parameters.Add("@indice_intervention", _intervention.indice_intervention);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public async Task<bool> insertIntervention(Intervention _intervention)
@@ -292,6 +322,35 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@adresse_email", _client.adresse_email);
                 cmd.Parameters.Add("@numero_fax", _client.numero_fax);
                 cmd.Parameters.Add("@indice_assurance", _client.indice_assurance);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception E)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public async Task<bool> deleteCustomer(Client _customer)
+        {
+            try
+            {
+                var interventions = InterventionVM.Instance.Interventions.Where(x => x.indice_client == _customer.indice_client);
+
+                foreach(Intervention inter in interventions)
+                {
+                    await SQLDataHelper.Instance.deleteIntervention(inter);
+                }
+
+                string query = "DELETE FROM client WHERE indice_client = @indice_client";
+                await OpenConnection();
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Prepare();
+
+                cmd.Parameters.Add("@indice_client", _customer.indice_client);
+
                 cmd.ExecuteNonQuery();
             }
             catch (Exception E)

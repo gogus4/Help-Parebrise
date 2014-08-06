@@ -61,7 +61,7 @@ namespace FirstFloor.ModernUI {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à cancel.
+        ///   Recherche une chaîne localisée semblable à Annuler.
         /// </summary>
         public static string Cancel {
             get {
@@ -124,7 +124,7 @@ namespace FirstFloor.ModernUI {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à no.
+        ///   Recherche une chaîne localisée semblable à Non.
         /// </summary>
         public static string No {
             get {
@@ -178,7 +178,7 @@ namespace FirstFloor.ModernUI {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à yes.
+        ///   Recherche une chaîne localisée semblable à Oui.
         /// </summary>
         public static string Yes {
             get {
