@@ -31,6 +31,11 @@
             <TextBlock Text="DONNEES INTERVENTION" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
 
             <StackPanel Orientation="Horizontal">
+                <Label Content="Bon de commande" />
+                <TextBox x:Name="NumBonCommande" Width="150" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
                 <Label Content="Date de l'intervention" />
                 <DatePicker x:Name="DateIntervention" Width="150" />
             </StackPanel>
@@ -122,6 +127,11 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Cause du sinistre" />
                 <TextBox x:Name="CauseSinistre" Width="150" Text="{Binding CauseSinistre}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Date d'échéance" />
+                <DatePicker x:Name="DateEcheance" Width="150" Text="{Binding DateEcheance}"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">

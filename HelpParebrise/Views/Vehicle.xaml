@@ -33,8 +33,8 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Column="0" Grid.Row="1">
-            <ListView x:Name="listVehicles" SelectedIndex="0" SelectionChanged="listVehicles_SelectionChanged">
+        <StackPanel Grid.Column="0" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ListView x:Name="listVehicles" Height="500" MaxHeight="500" SelectedIndex="0" SelectionChanged="listVehicles_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Visible">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical">

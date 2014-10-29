@@ -13,7 +13,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.3*"/>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.02*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -87,6 +87,12 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
+                <Label Content="Bon de commande" />
+                <TextBox x:Name="NumBonCommande" Text="{Binding bon_de_commande}" Width="150" />
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal">
                 <Label Content="Date de l'intervention" />
                 <DatePicker x:Name="DateIntervention" Width="150" Text="{Binding date_intervention}"/>
             </StackPanel>
@@ -138,7 +144,7 @@
                 <Label Content="Remise" />
                 <TextBox x:Name="remise" Width="150" Text="{Binding remise}"/>
             </StackPanel>
-
+            
             <StackPanel Orientation="Horizontal">
                 <Label Content="Franchise" />
                 <TextBox x:Name="franchise" Width="150" Text="{Binding franchise}"/>
@@ -181,8 +187,13 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Update_Click" />
-                <Button x:Name="AddPicture" Content="Ajouter une photo" HorizontalAlignment="Left" Margin="5,20,0,0" Click="AddPicture_Click" />
+                <Label Content="Date échéance" />
+                <DatePicker x:Name="date_echeance" Width="150" Text="{Binding date_echeance}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,3,0,0" Click="Update_Click" />
+                <Button x:Name="AddPicture" Content="Ajouter une photo" HorizontalAlignment="Left" Margin="5,3,0,0" Click="AddPicture_Click" />
             </StackPanel>
         </StackPanel>
 

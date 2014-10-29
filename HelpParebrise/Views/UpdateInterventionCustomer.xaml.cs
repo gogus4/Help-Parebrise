@@ -103,6 +103,7 @@ namespace HelpParebrise.Views
                 intervention.date_facture = DateFacture.Text;
                 intervention.date_intervention = DateIntervention.Text;
                 intervention.date_sinistre = DateSinistre.Text;
+                intervention.date_echeance = date_echeance.Text;
 
                 var result = await InterventionVM.Instance.updateIntervention(intervention);
 
@@ -120,7 +121,11 @@ namespace HelpParebrise.Views
             piece_intervention.indice_piece = piece.indice_piece;
             piece_intervention.quantite = int.Parse(QuantitePieceIntervention.Text);
             piece_intervention.reference = piece.reference;
-            piece_intervention.remise = int.Parse(RemisePieceIntervention.Text);
+
+            double remise;
+            double.TryParse(RemisePieceIntervention.Text, out remise);
+
+            piece_intervention.remise = remise;
 
             await PieceInterventionVM.Instance.insertPieceIntervention(piece_intervention);
             PieceInterventionVM.Instance.getPiecesIntervention();
@@ -157,7 +162,7 @@ namespace HelpParebrise.Views
         {
             PieceIntervention pieceIntervention = (PieceIntervention)pieceInterventionDataGrid.SelectedItem;
             pieceIntervention.quantite = int.Parse(quantitePieceInter.Text);
-            pieceIntervention.remise = int.Parse(RemisePieceInter.Text);
+            pieceIntervention.remise = double.Parse(RemisePieceInter.Text.Replace(".",","));
 
             await PieceInterventionVM.Instance.deletePieceIntervention(pieceIntervention);
 

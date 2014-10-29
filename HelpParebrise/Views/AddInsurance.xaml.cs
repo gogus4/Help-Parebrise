@@ -59,12 +59,12 @@ namespace HelpParebrise.Views
 
         private async void Add_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxButton btn = MessageBoxButton.OKCancel;
+
             if (ComboListContact.SelectedItem != null)
             {
-                MessageBoxButton btn = MessageBoxButton.OKCancel;
-
                 Contact contact = (Contact)ComboListContact.SelectedItem;
-                var result = await InsuranceVM.Instance.insertInsurance(new Assurance { adresse = Adresse.Text, adresse_email = Email.Text, code_postal = CodePostal.Text, indice_contact = contact.indice_contact, nom = Name.Text, numero_contrat = NumContrat.Text, numero_fax = NumFax.Text, numero_telephone = NumTel.Text, ville = Ville.Text});
+                var result = await InsuranceVM.Instance.insertInsurance(new Assurance { adresse = Adresse.Text, adresse_email = Email.Text, code_postal = CodePostal.Text, indice_contact = contact.indice_contact, nom = Name.Text, numero_contrat = NumContrat.Text, numero_fax = NumFax.Text, numero_telephone = NumTel.Text, ville = Ville.Text });
 
                 ModernDialog.ShowMessage(result[1], result[0], btn);
 
@@ -72,6 +72,9 @@ namespace HelpParebrise.Views
 
                 refreshInsurance();
             }
+
+            else
+                ModernDialog.ShowMessage("Aucun contact selectionné. Merci d'en selectionner un.", "Contact non selectionné", btn);
         }
 
         void refreshInsurance()

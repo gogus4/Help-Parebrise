@@ -26,7 +26,7 @@
             <Grid Grid.Row="0">
                 <TextBlock Text="CONSULTER" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
 
-                <DataGrid Name="suppliersDataGrid" Margin="0,40,0,0" Height="300" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" SelectionChanged="stockDataGrid_SelectionChanged" >
+                <DataGrid Name="suppliersDataGrid" ColumnWidth="*" Margin="0,40,0,0" Height="300" VerticalAlignment="Top" HorizontalAlignment="Left" Width="500" VerticalScrollBarVisibility="Visible" AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" SelectionChanged="stockDataGrid_SelectionChanged" >
                     <DataGrid.Columns>
                         <mui:DataGridTextColumn Header="Nom"  Binding="{Binding nom}"/>
                         <mui:DataGridTextColumn Header="Adresse" Binding="{Binding adresse}" />

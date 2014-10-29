@@ -43,8 +43,8 @@ namespace HelpParebrise.Common
             string CST_PATH_LOGOS = @"\logos\";
             string fullPathLogos = AppDomain.CurrentDomain.BaseDirectory + CST_PATH_LOGOS;
             FileInfo fi = new FileInfo(fullPathLogos + "help_parebrise.png");
-            FileInfo IconEuros = new FileInfo(fullPathLogos + "euro.png");
-            FileInfo IconEurosBold = new FileInfo(fullPathLogos + "euroBold.png");
+            //FileInfo IconEuros = new FileInfo(fullPathLogos + "euro.png");
+            //FileInfo IconEurosBold = new FileInfo(fullPathLogos + "euroBold.png");
             if (fi.Exists)
             {
                 myFirstPage.addImage(fi.FullName, 70, 670);
@@ -312,7 +312,7 @@ namespace HelpParebrise.Common
                 myFirstPage.addText(pieces_intervention[i].designation, 90, (lineStartY - 11), predefinedFont.csTimes, 9);
                 myFirstPage.addText(pieces_intervention[i].quantite.ToString(), 380, (lineStartY - 11), predefinedFont.csTimes, 9);
                 myFirstPage.addText(string.Format("{0}", pieces_intervention[i].prix.ToString()), 440, (lineStartY - 11), predefinedFont.csTimes, 9);
-                myFirstPage.addImage(IconEuros.FullName, 455, (lineStartY - 11));
+                //myFirstPage.addImage(IconEuros.FullName, 455, (lineStartY - 11));
                 myFirstPage.addText(string.Format("{0} %", pieces_intervention[i].remise.ToString()), 495, (lineStartY - 11), predefinedFont.csTimes, 9);
 
                 double valueWithoutRemise = pieces_intervention[i].quantite * pieces_intervention[i].prix;
@@ -320,7 +320,7 @@ namespace HelpParebrise.Common
                 valeurHT += valueHT;
 
                 myFirstPage.addText(valueHT.ToString(), 540, (lineStartY - 11), predefinedFont.csTimes, 9);
-                myFirstPage.addImage(IconEuros.FullName, 555, (lineStartY - 11));
+                //myFirstPage.addImage(IconEuros.FullName, 555, (lineStartY - 11));
 
                 lineStartY -= 15;
                 lineEndY -= 15;
@@ -399,7 +399,7 @@ namespace HelpParebrise.Common
 
             #endregion
 
-            string nomFichier = @"C:/Users/Diego/Desktop/impression_" + DateTime.Now.Millisecond + ".pdf";
+            string nomFichier = @"C:\FACTURE\impression_" + DateTime.Now.Millisecond + ".pdf";
             myDoc.createPDF(nomFichier);
         }
     }

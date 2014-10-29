@@ -91,6 +91,7 @@ namespace HelpParebrise.Data
                     _interventions.Add(new Intervention()
                     {
                         acompte = double.Parse(dataReader["acompte"].ToString()),
+                        bon_de_commande = dataReader["bon_de_commande"].ToString(),
                         cause_sinistre = dataReader["cause_sinistre"].ToString(),
                         date_facture = dataReader["date_facture"].ToString(),
                         date_intervention = dataReader["date_intervention"].ToString(),
@@ -106,7 +107,8 @@ namespace HelpParebrise.Data
                         prix_HT = double.Parse(dataReader["prix_HT"].ToString()),
                         prix_TTC = double.Parse(dataReader["prix_TTC"].ToString()),
                         remise = double.Parse(dataReader["remise"].ToString()),
-                        adresse_intervention = dataReader["adresse_intervention"].ToString()
+                        adresse_intervention = dataReader["adresse_intervention"].ToString(),
+                        date_echeance = dataReader["date_echeance"].ToString()
                     });
                 }
 
@@ -151,7 +153,7 @@ namespace HelpParebrise.Data
         {
             try
             {
-                string query = "INSERT INTO intervention(indice_client,indice_vehicule,date_intervention,date_facture,numero_facture,prix_HT,prix_TTC,id_tva,acompte,remise,franchise,indice_prestation,indice_mode_paiement,date_sinistre,cause_sinistre,adresse_intervention) VALUES(@indice_client,@indice_vehicule,@date_intervention,@date_facture,@numero_facture,@prix_HT,@prix_TTC,@id_tva,@acompte,@remise,@franchise,@indice_prestation,@indice_mode_paiement,@date_sinistre,@cause_sinistre,@adresse_intervention)";
+                string query = "INSERT INTO intervention(indice_client,indice_vehicule,date_intervention,date_facture,numero_facture,prix_HT,prix_TTC,id_tva,acompte,remise,franchise,indice_prestation,indice_mode_paiement,date_sinistre,cause_sinistre,adresse_intervention,date_echeance) VALUES(@indice_client,@indice_vehicule,@date_intervention,@date_facture,@numero_facture,@prix_HT,@prix_TTC,@id_tva,@acompte,@remise,@franchise,@indice_prestation,@indice_mode_paiement,@date_sinistre,@cause_sinistre,@adresse_intervention,@date_echeance)";
                 await OpenConnection();
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -173,6 +175,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@date_sinistre", _intervention.date_sinistre);
                 cmd.Parameters.Add("@cause_sinistre", _intervention.cause_sinistre);
                 cmd.Parameters.Add("@adresse_intervention", _intervention.adresse_intervention);
+                cmd.Parameters.Add("@date_echeance", _intervention.date_echeance);
 
                 cmd.ExecuteNonQuery();
             }
@@ -188,7 +191,7 @@ namespace HelpParebrise.Data
         {
             try
             {
-                string query = "UPDATE intervention SET indice_client = @indice_client,indice_vehicule=@indice_vehicule, date_intervention= @date_intervention, date_facture = @date_facture, numero_facture=@numero_facture, prix_HT=@prix_HT, prix_TTC=@prix_TTC, id_tva=@id_tva, acompte=@acompte, remise=@remise, franchise = @franchise, indice_prestation=@indice_prestation, indice_mode_paiement=@indice_mode_paiement, date_sinistre=@date_sinistre, cause_sinistre=@cause_sinistre, adresse_intervention=@adresse_intervention WHERE indice_intervention = @indice_intervention";
+                string query = "UPDATE intervention SET indice_client = @indice_client,indice_vehicule=@indice_vehicule, date_intervention= @date_intervention, date_facture = @date_facture, numero_facture=@numero_facture, prix_HT=@prix_HT, prix_TTC=@prix_TTC, id_tva=@id_tva, acompte=@acompte, remise=@remise, franchise = @franchise, indice_prestation=@indice_prestation, indice_mode_paiement=@indice_mode_paiement, date_sinistre=@date_sinistre, cause_sinistre=@cause_sinistre, adresse_intervention=@adresse_intervention,date_echeance=@date_echeance WHERE indice_intervention = @indice_intervention";
                 await OpenConnection();
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -211,6 +214,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@cause_sinistre", _intervention.cause_sinistre);
                 cmd.Parameters.Add("@adresse_intervention", _intervention.adresse_intervention);
                 cmd.Parameters.Add("@indice_intervention", _intervention.indice_intervention);
+                cmd.Parameters.Add("@date_echeance", _intervention.date_echeance);
 
                 cmd.ExecuteNonQuery();
             }
@@ -234,7 +238,7 @@ namespace HelpParebrise.Data
                 await OpenConnection();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dataReader = cmd.ExecuteReader();
-                int ? indice_assurance = 0;
+                int? indice_assurance = 0;
 
                 while (dataReader.Read())
                 {
@@ -338,7 +342,7 @@ namespace HelpParebrise.Data
             {
                 var interventions = InterventionVM.Instance.Interventions.Where(x => x.indice_client == _customer.indice_client);
 
-                foreach(Intervention inter in interventions)
+                foreach (Intervention inter in interventions)
                 {
                     await SQLDataHelper.Instance.deleteIntervention(inter);
                 }
@@ -1105,7 +1109,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@numero_fax", _supplier.numero_fax);
                 cmd.Parameters.Add("@en_cours", _supplier.en_cours);
                 cmd.Parameters.Add("@indice_fournisseur", _supplier.indice_fournisseur);
-                
+
                 cmd.ExecuteNonQuery();
             }
             catch (Exception E)

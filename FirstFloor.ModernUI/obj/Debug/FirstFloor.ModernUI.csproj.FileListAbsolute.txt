@@ -199,7 +199,6 @@ C:\Users\Diego\Documents\depot\HelpParebrise\FirstFloor.ModernUI\obj\Debug\First
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\bin\Debug\FirstFloor.ModernUI.XML
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\bin\Debug\FirstFloor.ModernUI.dll
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\bin\Debug\FirstFloor.ModernUI.pdb
-C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\Assets\Button.baml
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\Assets\CheckBox.baml
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\Assets\ComboBox.baml

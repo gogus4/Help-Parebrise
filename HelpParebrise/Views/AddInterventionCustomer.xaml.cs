@@ -73,7 +73,24 @@ namespace HelpParebrise.Views
                 Prestation prestation = (Prestation)ComboListTypePrestation.SelectedItem;
                 Tva tva = (Tva)ComboListTauxTVA.SelectedItem;
 
-                Intervention intervention = new Intervention { acompte = double.Parse(acompte.Text), cause_sinistre = CauseSinistre.Text, date_facture = DateFacture.Text, date_intervention = DateIntervention.Text, date_sinistre = DateSinistre.Text, franchise = double.Parse(franchise.Text), numero_facture = NumFacture.Text, prix_HT = double.Parse(PriceHT.Text), prix_TTC = double.Parse(PriceTTC.Text), remise = double.Parse(remise.Text), indice_vehicule = vehicule.indice_vehicule, indice_client = client.indice_client, indice_mode_paiement = modePaiement.indice_mode_paiement, indice_prestation = prestation.indice_prestation, id_tva = tva.id_tva, adresse_intervention = AdresseIntervention.Text };
+                string ACompte = "";
+                string Franchise = "";
+
+                if (acompte.Text == "")
+                    ACompte = "0,0";
+
+                else
+                    ACompte = acompte.Text;
+
+                if (franchise.Text == "")
+                    Franchise = "0,0";
+
+                else
+                    Franchise = franchise.Text;
+
+                double test = double.Parse(Franchise);
+
+                Intervention intervention = new Intervention { bon_de_commande = NumBonCommande.Text, acompte = double.Parse(ACompte), cause_sinistre = CauseSinistre.Text, date_facture = DateFacture.Text, date_intervention = DateIntervention.Text, date_sinistre = DateSinistre.Text, franchise = double.Parse(Franchise), numero_facture = NumFacture.Text, prix_HT = double.Parse(PriceHT.Text), prix_TTC = double.Parse(PriceTTC.Text), remise = double.Parse(remise.Text), indice_vehicule = vehicule.indice_vehicule, indice_client = client.indice_client, indice_mode_paiement = modePaiement.indice_mode_paiement, indice_prestation = prestation.indice_prestation, id_tva = tva.id_tva, adresse_intervention = AdresseIntervention.Text, date_echeance = DateEcheance.Text };
                 var result = await InterventionVM.Instance.insertIntervention(intervention);
 
                 ModernDialog.ShowMessage(result[1], result[0], btn);
@@ -82,7 +99,7 @@ namespace HelpParebrise.Views
                 refreshCustomers();
                 Close();
             }
-            catch (Exception E) 
+            catch (Exception E)
             {
                 ModernDialog.ShowMessage("Une erreur est intervenue lors de l'insertion de l'intervention", "Erreur", btn);
             }

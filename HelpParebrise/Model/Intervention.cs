@@ -12,6 +12,7 @@ namespace HelpParebrise.Model
         public int indice_intervention { get; set; }
         public int indice_client { get; set; }
         public int indice_vehicule { get; set; }
+        public string bon_de_commande { get; set; }
         public string date_intervention { get; set; }
         public string date_facture { get; set; }
         public string numero_facture { get; set; }
@@ -26,5 +27,6 @@ namespace HelpParebrise.Model
         public string date_sinistre { get; set; }
         public string cause_sinistre { get; set; }
         public string adresse_intervention { get; set; }
+        public string date_echeance { get; set; }
     }
 }
