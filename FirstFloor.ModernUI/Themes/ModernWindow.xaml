@@ -16,7 +16,7 @@
         <Setter Property="ResizeMode" Value="NoResize" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
-        
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="controls:ModernWindow">
@@ -41,7 +41,7 @@
                                             <RowDefinition Height="*" />
                                             <RowDefinition Height="60" />
                                         </Grid.RowDefinitions>
-                                        
+
                                         <!--<Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="6*" />
                                             <ColumnDefinition Width="*" />
@@ -84,6 +84,16 @@
                                                     </Grid>
                                                 </Button.Content>
                                             </Button>
+
+                                            <Button x:Name="Maximize" Command="{Binding Source={x:Static SystemCommands.MaximizeWindowCommand}}" ToolTip="{x:Static modernui:Resources.Maximize}" Style="{StaticResource SystemButton}" >
+                                                <Button.Content>
+                                                    <Grid Width="13" Height="12">
+                                                        <Path Data="M0,1 L9,1 L9,8 L0,8 Z" Width="9" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                                  Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="2"  />
+                                                    </Grid>
+                                                </Button.Content>
+                                            </Button>
+
                                             <Grid Margin="1,0,1,0">
                                                 <Button x:Name="Restore" Command="{Binding Source={x:Static SystemCommands.RestoreWindowCommand}}" ToolTip="{x:Static modernui:Resources.Restore}" Style="{StaticResource SystemButton}" Visibility="Collapsed" >
                                                     <Button.Content>
@@ -146,7 +156,7 @@
                                                                WindowChrome.IsHitTestVisibleInChrome="True" >
                                         </controls:ModernButton>
 
-                                        
+
                                         <!-- content frame -->
                                         <controls:ModernFrame x:Name="ContentFrame" Grid.Row="3" Grid.RowSpan="2" Margin="36,8,16,16" Source="{Binding ContentSource, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" ContentLoader="{TemplateBinding ContentLoader}"/>
 

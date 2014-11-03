@@ -39,18 +39,18 @@ namespace HelpParebrise.Views
                 if (NumInter.Text != "")
                     inter = InterventionVM.Instance.getIntervention(int.Parse(NumInter.Text));
 
-                else if(dateInter.Text != "")
+                else if (dateInter.Text != "")
                     inter = InterventionVM.Instance.Interventions.Where(x => x.date_intervention == dateInter.Text).FirstOrDefault();
 
                 Printing.printIntervention(inter);
 
                 MessageBoxButton btn = MessageBoxButton.OKCancel;
-                ModernDialog.ShowMessage(string.Format("L'intervention n°{0} s'est correctement imprimé.",inter.indice_intervention),"Impression de la facture réussi.", btn);
+                ModernDialog.ShowMessage(string.Format("L'intervention n°{0} s'est correctement imprimé.", inter.indice_intervention), "Impression de la facture réussi.", btn);
             }
             catch (Exception E)
             {
                 MessageBoxButton btn = MessageBoxButton.OKCancel;
-                ModernDialog.ShowMessage("Le numéro d'intervention est incorrect.","Erreur numéro d'intervention",btn);
+                ModernDialog.ShowMessage("Le numéro d'intervention est incorrect.", "Erreur numéro d'intervention", btn);
                 Debug.Write(E.Message);
             }
         }

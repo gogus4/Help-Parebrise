@@ -245,3 +245,4 @@ C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\Fir
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.csproj.GenerateResource.Cache
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.dll
 C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.pdb
+C:\Users\Diego\Documents\GitHub\Help-Parebrise\FirstFloor.ModernUI\obj\Debug\FirstFloor.ModernUI.csprojResolveAssemblyReference.cache

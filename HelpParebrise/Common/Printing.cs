@@ -90,17 +90,25 @@ namespace HelpParebrise.Common
 
             myFirstPage.drawRectangle(20, 547, 250, 473, new pdfColor(predefinedColor.csBlack), new pdfColor(predefinedColor.csWhite), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("Adresse :", 25, 536, predefinedFont.csTimes, 9);
+            myFirstPage.addText(inter.adresse_intervention, 130, 536, predefinedFont.csTimes, 9);
+
             myFirstPage.addText("CP / ville :", 25, 524, predefinedFont.csTimes, 9);
+
             myFirstPage.addText("Contact :", 25, 512, predefinedFont.csTimes, 9);
-            myFirstPage.addText("CP / ville :", 25, 500, predefinedFont.csTimes, 9);
-            myFirstPage.addText("Tél :", 25, 488, predefinedFont.csTimes, 9);
-            myFirstPage.addText("Email :", 25, 476, predefinedFont.csTimes, 9);
+
+
+            myFirstPage.addText("Tél :", 25, 500, predefinedFont.csTimes, 9);
+
+
+            myFirstPage.addText("Email :", 25, 488, predefinedFont.csTimes, 9);
+            
+
 
             myFirstPage.drawRectangle(20, 473, 90, 460, new pdfColor(predefinedColor.csBlack), new pdfColor(218, 150, 148), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("DATE", 30, 463, predefinedFont.csTimesBold, 10);
 
             myFirstPage.drawRectangle(90, 473, 250, 460, new pdfColor(predefinedColor.csBlack), new pdfColor(predefinedColor.csWhite), 1, predefinedLineStyle.csNormal);
-            myFirstPage.addText("Date a inserer", 95, 463, predefinedFont.csTimesBold, 10);
+            myFirstPage.addText(inter.date_intervention, 95, 463, predefinedFont.csTimesBold, 10);
             #endregion
 
             #region TOP RIGHT
@@ -158,7 +166,10 @@ namespace HelpParebrise.Common
                 myFirstPage.addText(assurance_client.numero_telephone, 430, 488, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Date du sinistre :", 255, 476, predefinedFont.csTimes, 9);
-            myFirstPage.addText(inter.date_sinistre, 430, 476, predefinedFont.csTimes, 9);
+            myFirstPage.addText(inter.date_sinistre, 320, 476, predefinedFont.csTimes, 9);
+
+            myFirstPage.addText("Cause du sinistre :", 380, 476, predefinedFont.csTimes, 9);
+            myFirstPage.addText(inter.cause_sinistre, 450, 476, predefinedFont.csTimes, 9);
 
             myFirstPage.drawRectangle(250, 473, 370, 460, new pdfColor(predefinedColor.csBlack), new pdfColor(218, 150, 148), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("TYPE DE PRESTATION", 255, 463, predefinedFont.csTimesBold, 10);
@@ -387,7 +398,8 @@ namespace HelpParebrise.Common
 
             myFirstPage.drawRectangle(415, 85, 581, 70, new pdfColor(predefinedColor.csBlack), new pdfColor(predefinedColor.csWhite), 1, predefinedLineStyle.csNormal);
 
-            myFirstPage.addText(string.Format("{0}/{1}/{2}",date_echeance.Day,date_echeance.Month,date_echeance.Year), 230, 75, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
+            // myFirstPage.addText(string.Format("{0}/{1}/{2}",date_echeance.Day,date_echeance.Month,date_echeance.Year), 230, 75, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
+            myFirstPage.addText(inter.date_echeance, 230, 75, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
             myFirstPage.addText((valueTVA + valeurHT).ToString(), 490, 75, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
             myFirstPage.addText("Récapitulatif des échéances :", 210, 105, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
             #endregion
