@@ -12,6 +12,7 @@ namespace HelpParebrise.Model
         public int indice_intervention { get; set; }
         public int indice_client { get; set; }
         public int indice_vehicule { get; set; }
+        public int indice_contact { get; set; }
         public string bon_de_commande { get; set; }
         public string date_intervention { get; set; }
         public string date_facture { get; set; }

@@ -94,9 +94,9 @@
 
                             <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Margin="30,5,0,0">
                                 <TextBlock FontSize="36" FontWeight="Bold">
-                                    <Run Text="{Binding Path=indice_client, Converter={StaticResource InterventionsCountConverter}}" />
+                                    <Run Text="{Binding nb_interventions}" />
                                 </TextBlock>
-                            </Grid>
+                            </Grid> 
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

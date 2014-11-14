@@ -34,6 +34,7 @@ namespace HelpParebrise.Common
             Tva tva_intervention = TvaVM.Instance.TVA.Where(x => x.id_tva == inter.id_tva).FirstOrDefault();
             ModePaiement mode_paiement = ModePaiementVM.Instance.ModesPaiement.Where(x => x.indice_mode_paiement == inter.indice_mode_paiement).FirstOrDefault();
             Prestation type_prestation = TypePrestationVM.Instance.TypePrestations.Where(x => x.indice_prestation == inter.indice_prestation).FirstOrDefault();
+            Contact contact_intervention = ContactVM.Instance.Contacts.Where(x => x.indice_contact == inter.indice_contact).FirstOrDefault();
 
             pdfDocument myDoc = new pdfDocument("TUTORIAL", "ME");
             int numberLine = 521;
@@ -43,8 +44,7 @@ namespace HelpParebrise.Common
             string CST_PATH_LOGOS = @"\logos\";
             string fullPathLogos = AppDomain.CurrentDomain.BaseDirectory + CST_PATH_LOGOS;
             FileInfo fi = new FileInfo(fullPathLogos + "help_parebrise.png");
-            //FileInfo IconEuros = new FileInfo(fullPathLogos + "euro.png");
-            //FileInfo IconEurosBold = new FileInfo(fullPathLogos + "euroBold.png");
+
             if (fi.Exists)
             {
                 myFirstPage.addImage(fi.FullName, 70, 670);
@@ -93,16 +93,16 @@ namespace HelpParebrise.Common
             myFirstPage.addText(inter.adresse_intervention, 130, 536, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("CP / ville :", 25, 524, predefinedFont.csTimes, 9);
+            myFirstPage.addText(string.Format("{0} {1}", client.code_postal, client.ville), 130, 524, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Contact :", 25, 512, predefinedFont.csTimes, 9);
-
+            myFirstPage.addText(string.Format("{0} {1}", contact_intervention.prenom, contact_intervention.nom), 130, 512, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Tél :", 25, 500, predefinedFont.csTimes, 9);
-
+            myFirstPage.addText(contact_intervention.numero_telephone1, 130, 500, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Email :", 25, 488, predefinedFont.csTimes, 9);
-            
-
+            myFirstPage.addText(contact_intervention.adresse_email, 130, 488, predefinedFont.csTimes, 9);
 
             myFirstPage.drawRectangle(20, 473, 90, 460, new pdfColor(predefinedColor.csBlack), new pdfColor(218, 150, 148), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("DATE", 30, 463, predefinedFont.csTimesBold, 10);
@@ -143,6 +143,7 @@ namespace HelpParebrise.Common
 
             myFirstPage.drawRectangle(250, 547, 580, 473, new pdfColor(predefinedColor.csBlack), new pdfColor(predefinedColor.csWhite), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("N° de bon de commande :", 255, 536, predefinedFont.csTimes, 9);
+            myFirstPage.addText(inter.bon_de_commande, 352, 536, predefinedFont.csTimes, 9);
 
             myFirstPage.addText(string.Format("Date d'intervention : {0}", inter.date_intervention), 440, 536, predefinedFont.csTimes, 9);
             myFirstPage.addText("Assurance :", 255, 524, predefinedFont.csTimes, 9);

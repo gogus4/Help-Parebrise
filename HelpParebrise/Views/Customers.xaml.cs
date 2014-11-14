@@ -43,8 +43,8 @@ namespace HelpParebrise.Views
 
         void LoadCustomersData(object sender, DoWorkEventArgs e)
         {
-            CustomerVM.Instance.getCustomers();
             InterventionVM.Instance.getInterventions();
+            CustomerVM.Instance.getCustomers();         
             ContactVM.Instance.getContacts();
             InsuranceVM.Instance.getInsurances();
         }

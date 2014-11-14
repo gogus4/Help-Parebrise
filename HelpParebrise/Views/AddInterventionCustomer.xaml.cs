@@ -51,6 +51,7 @@ namespace HelpParebrise.Views
             ModePaiementVM.Instance.getModesPaiement();
             PieceVM.Instance.getPieces();
             TvaVM.Instance.getTva();
+            ContactsVM.Instance.getContacts();
         }
 
         void LoadDataComplete(object sender, RunWorkerCompletedEventArgs e)
@@ -60,48 +61,58 @@ namespace HelpParebrise.Views
             ComboListTypePrestation.ItemsSource = TypePrestationVM.Instance.TypePrestations;
             ComboListModesPaiement.ItemsSource = ModePaiementVM.Instance.ModesPaiement;
             ComboListTauxTVA.ItemsSource = TvaVM.Instance.TVA;
+            ComboListContact.ItemsSource = ContactsVM.Instance.Contacts;
         }
 
         private async void Add_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxButton btn = MessageBoxButton.OKCancel;
 
-            try
+            if (ComboListContact.SelectedItem != null)
             {
-                Vehicule vehicule = (Vehicule)ComboListVehicules.SelectedItem;
-                ModePaiement modePaiement = (ModePaiement)ComboListModesPaiement.SelectedItem;
-                Prestation prestation = (Prestation)ComboListTypePrestation.SelectedItem;
-                Tva tva = (Tva)ComboListTauxTVA.SelectedItem;
+                try
+                {
+                    Vehicule vehicule = (Vehicule)ComboListVehicules.SelectedItem;
+                    ModePaiement modePaiement = (ModePaiement)ComboListModesPaiement.SelectedItem;
+                    Prestation prestation = (Prestation)ComboListTypePrestation.SelectedItem;
+                    Tva tva = (Tva)ComboListTauxTVA.SelectedItem;
+                    Contact contact = (Contact)ComboListContact.SelectedItem;
 
-                string ACompte = "";
-                string Franchise = "";
+                    string ACompte = "";
+                    string Franchise = "";
 
-                if (acompte.Text == "")
-                    ACompte = "0,0";
+                    if (acompte.Text == "")
+                        ACompte = "0,0";
 
-                else
-                    ACompte = acompte.Text;
+                    else
+                        ACompte = acompte.Text;
 
-                if (franchise.Text == "")
-                    Franchise = "0,0";
+                    if (franchise.Text == "")
+                        Franchise = "0,0";
 
-                else
-                    Franchise = franchise.Text;
+                    else
+                        Franchise = franchise.Text;
 
-                double test = double.Parse(Franchise);
+                    double test = double.Parse(Franchise);
 
-                Intervention intervention = new Intervention { bon_de_commande = NumBonCommande.Text, acompte = double.Parse(ACompte), cause_sinistre = CauseSinistre.Text, date_facture = DateFacture.Text, date_intervention = DateIntervention.Text, date_sinistre = DateSinistre.Text, franchise = double.Parse(Franchise), numero_facture = NumFacture.Text, prix_HT = double.Parse(PriceHT.Text), prix_TTC = double.Parse(PriceTTC.Text), remise = double.Parse(remise.Text), indice_vehicule = vehicule.indice_vehicule, indice_client = client.indice_client, indice_mode_paiement = modePaiement.indice_mode_paiement, indice_prestation = prestation.indice_prestation, id_tva = tva.id_tva, adresse_intervention = AdresseIntervention.Text, date_echeance = DateEcheance.Text };
-                var result = await InterventionVM.Instance.insertIntervention(intervention);
+                    Intervention intervention = new Intervention { bon_de_commande = NumBonCommande.Text, acompte = double.Parse(ACompte), cause_sinistre = CauseSinistre.Text, date_facture = DateFacture.Text, date_intervention = DateIntervention.Text, date_sinistre = DateSinistre.Text, franchise = double.Parse(Franchise), numero_facture = NumFacture.Text, prix_HT = double.Parse(PriceHT.Text), prix_TTC = double.Parse(PriceTTC.Text), remise = double.Parse(remise.Text), indice_vehicule = vehicule.indice_vehicule, indice_client = client.indice_client, indice_mode_paiement = modePaiement.indice_mode_paiement, indice_prestation = prestation.indice_prestation, id_tva = tva.id_tva, adresse_intervention = AdresseIntervention.Text, date_echeance = DateEcheance.Text,indice_contact = contact.indice_contact };
+                    var result = await InterventionVM.Instance.insertIntervention(intervention);
 
-                ModernDialog.ShowMessage(result[1], result[0], btn);
-                CustomerVM.Instance.getCustomers();
+                    ModernDialog.ShowMessage(result[1], result[0], btn);
+                    CustomerVM.Instance.getCustomers();
 
-                refreshCustomers();
-                Close();
+                    refreshCustomers();
+                    Close();
+                }
+                catch (Exception E)
+                {
+                    ModernDialog.ShowMessage("Une erreur est intervenue lors de l'insertion de l'intervention", "Erreur", btn);
+                }
             }
-            catch (Exception E)
+
+            else
             {
-                ModernDialog.ShowMessage("Une erreur est intervenue lors de l'insertion de l'intervention", "Erreur", btn);
+                ModernDialog.ShowMessage("Merci de selectionner un contact.", "Erreur", btn);
             }
         }
 
@@ -136,6 +147,11 @@ namespace HelpParebrise.Views
         {
             CreateVehicle createVehicule = new CreateVehicle();
             createVehicule.Show();
+        }
+
+        private void ComboListContact_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataContact.DataContext = ComboListContact.SelectedItem;
         }
     }
 }

@@ -58,6 +58,7 @@ namespace HelpParebrise.Views
             TvaVM.Instance.getTva();
             VehiculeVM.Instance.getVehicules();
             PhotosInterventionVM.Instance.getPhotosIntervention();
+            ContactsVM.Instance.getContacts();
         }
 
         void LoadDataComplete(object sender, RunWorkerCompletedEventArgs e)
@@ -69,6 +70,9 @@ namespace HelpParebrise.Views
                     PicturesIntervention.Visibility = Visibility.Visible;
                     listviewImagesIntervention.ItemsSource = PhotosInterventionVM.Instance.PhotosIntervention.Where(x => x.indice_intervention == intervention.indice_intervention);
                 }
+
+                ComboListContact.ItemsSource = ContactsVM.Instance.Contacts;
+                DataContact.DataContext = ContactsVM.Instance.Contacts.Where(x => x.indice_contact == intervention.indice_contact).FirstOrDefault();
 
                 ComboListPieces.ItemsSource = PieceVM.Instance.Pieces;
                 VehiculeDataContext.DataContext = VehiculeVM.Instance.Vehicules.Where(x => x.indice_vehicule == intervention.indice_vehicule).FirstOrDefault();
@@ -88,29 +92,40 @@ namespace HelpParebrise.Views
 
         private async void Update_Click(object sender, RoutedEventArgs e)
         {
-            try
+            MessageBoxButton btn = MessageBoxButton.OKCancel;
+
+            if (ComboListContact.SelectedItem != null)
             {
-                MessageBoxButton btn = MessageBoxButton.OKCancel;
-                var inter = DataInterventionGrid.DataContext;
+                try
+                {
+                    var inter = DataInterventionGrid.DataContext;
 
-                Prestation prestation = (Prestation)ComboListTypePrestation.SelectedItem;
-                ModePaiement mode_paiement = (ModePaiement)ComboListModesPaiement.SelectedItem;
-                Tva tva = (Tva)ComboListTauxTva.SelectedItem;
+                    Prestation prestation = (Prestation)ComboListTypePrestation.SelectedItem;
+                    ModePaiement mode_paiement = (ModePaiement)ComboListModesPaiement.SelectedItem;
+                    Tva tva = (Tva)ComboListTauxTva.SelectedItem;
+                    Contact contact = (Contact)ComboListContact.SelectedItem;
 
-                intervention.id_tva = tva.id_tva;
-                intervention.indice_mode_paiement = mode_paiement.indice_mode_paiement;
-                intervention.indice_prestation = prestation.indice_prestation;
-                intervention.date_facture = DateFacture.Text;
-                intervention.date_intervention = DateIntervention.Text;
-                intervention.date_sinistre = DateSinistre.Text;
-                intervention.date_echeance = date_echeance.Text;
+                    intervention.id_tva = tva.id_tva;
+                    intervention.indice_mode_paiement = mode_paiement.indice_mode_paiement;
+                    intervention.indice_prestation = prestation.indice_prestation;
+                    intervention.date_facture = DateFacture.Text;
+                    intervention.date_intervention = DateIntervention.Text;
+                    intervention.date_sinistre = DateSinistre.Text;
+                    intervention.date_echeance = date_echeance.Text;
+                    intervention.indice_contact = contact.indice_contact;
 
-                var result = await InterventionVM.Instance.updateIntervention(intervention);
+                    var result = await InterventionVM.Instance.updateIntervention(intervention);
 
-                ModernDialog.ShowMessage(result[1], result[0], btn);
-                this.Close();
+                    ModernDialog.ShowMessage(result[1], result[0], btn);
+                    this.Close();
+                }
+                catch (Exception E) { Debug.Write(E.Message); }
             }
-            catch (Exception E) { Debug.Write(E.Message); }
+
+            else
+            {
+                ModernDialog.ShowMessage("Merci de selectionner un contact.", "Erreur", btn);
+            }
         }
 
         private async void AddPiece_Click(object sender, RoutedEventArgs e)
@@ -162,7 +177,7 @@ namespace HelpParebrise.Views
         {
             PieceIntervention pieceIntervention = (PieceIntervention)pieceInterventionDataGrid.SelectedItem;
             pieceIntervention.quantite = int.Parse(quantitePieceInter.Text);
-            pieceIntervention.remise = double.Parse(RemisePieceInter.Text.Replace(".",","));
+            pieceIntervention.remise = double.Parse(RemisePieceInter.Text.Replace(".", ","));
 
             await PieceInterventionVM.Instance.deletePieceIntervention(pieceIntervention);
 
@@ -237,6 +252,11 @@ namespace HelpParebrise.Views
                 }
             }
             catch (Exception E) { Debug.Write(E.Message); }
+        }
+
+        private void ComboListContact_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataContact.DataContext = ComboListContact.SelectedItem;
         }
     }
 }

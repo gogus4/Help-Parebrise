@@ -20,5 +20,7 @@ namespace HelpParebrise.Model
         public string adresse_email { get; set; }
         public string numero_fax { get; set; }
         public int ? indice_assurance { get; set; }
+        public int nb_interventions { get; set; }
+
     }
 }

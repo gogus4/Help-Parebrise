@@ -203,5 +203,71 @@
                 <TextBox x:Name="kmVehicule" IsReadOnly="True" Width="150" Text="{Binding kilometrage}"/>
             </StackPanel>
         </StackPanel>
+
+        <StackPanel x:Name="DataContact" Grid.Column="2" Orientation="Vertical" Margin="20,0,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal" />
+                    <Setter Property="Margin" Value="0,0,0,5" />
+                </Style>
+
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="145" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="DONNEES CONTACT" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Liste des contacts " />
+                <ComboBox x:Name="ComboListContact" Width="150" SelectionChanged="ComboListContact_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock FontSize="12">
+                                <Run Text="{Binding prenom}"/>
+                                <Run Text=""/>
+                                <Run Text="{Binding nom}"/>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Nom" />
+                <TextBox x:Name="LastNameClient" Text="{Binding nom}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Prénom" />
+                <TextBox x:Name="FirstNameClient" Text="{Binding prenom}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Fonction" />
+                <TextBox x:Name="FunctionClient" Text="{Binding fonction}" Width="150" IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de téléphone 1" />
+                <TextBox x:Name="NumTel1Client" Text="{Binding numero_telephone_1}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de téléphone 2" />
+                <TextBox x:Name="NumTel2Client" Text="{Binding numero_telephone_2}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Adresse email" />
+                <TextBox x:Name="EmailClient" Text="{Binding adresse_email}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de fax" />
+                <TextBox x:Name="NumFaxClient" Text="{Binding numero_fax}" Width="150" IsReadOnly="True" />
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </mui:ModernDialog>
