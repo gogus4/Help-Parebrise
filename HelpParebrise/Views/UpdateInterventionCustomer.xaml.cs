@@ -38,6 +38,13 @@ namespace HelpParebrise.Views
 
             indiceIntervention = _indiceIntervention;
             intervention = InterventionVM.Instance.Interventions.Where(c => c.indice_intervention == indiceIntervention).FirstOrDefault();
+
+            if (intervention.assurance_impression == "Y")
+                AssuranceImpression.IsChecked = true;
+
+            else
+                AssuranceImpression.IsChecked = false;
+
             DataInterventionGrid.DataContext = intervention;
 
             #region THREAD
@@ -74,7 +81,7 @@ namespace HelpParebrise.Views
                 ComboListContact.ItemsSource = ContactsVM.Instance.Contacts;
                 DataContact.DataContext = ContactsVM.Instance.Contacts.Where(x => x.indice_contact == intervention.indice_contact).FirstOrDefault();
 
-                ComboListPieces.ItemsSource = PieceVM.Instance.Pieces;
+                ComboListPieces.ItemsSource = PieceVM.Instance.Pieces.OrderBy(x => x.designation);
                 VehiculeDataContext.DataContext = VehiculeVM.Instance.Vehicules.Where(x => x.indice_vehicule == intervention.indice_vehicule).FirstOrDefault();
 
                 ComboListTauxTva.ItemsSource = TvaVM.Instance.TVA;
@@ -113,6 +120,12 @@ namespace HelpParebrise.Views
                     intervention.date_sinistre = DateSinistre.Text;
                     intervention.date_echeance = date_echeance.Text;
                     intervention.indice_contact = contact.indice_contact;
+
+                    if (AssuranceImpression.IsChecked == true)
+                        intervention.assurance_impression = "Y";
+
+                    else
+                        intervention.assurance_impression = "N";
 
                     var result = await InterventionVM.Instance.updateIntervention(intervention);
 

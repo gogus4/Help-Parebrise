@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace HelpParebrise.Views
 {
-    /// <summary>
-    /// Interaction logic for ControlsStyles.xaml
-    /// </summary>
     public partial class CreateVehicle : ModernDialog
     {
         public CreateVehicle()
@@ -35,7 +32,7 @@ namespace HelpParebrise.Views
             {
                 MessageBoxButton btn = MessageBoxButton.OKCancel;
 
-                var result = await VehiculeVM.Instance.insertVehicle(new Vehicule { date_mise_en_service = DateMES.Text, immatriculation = Immatriculation.Text, kilometrage = double.Parse(Kilometrage.Text), marque = Marque.Text, modele = Modele.Text, numero_serie = NumSerie.Text, type_vehicule = TypeVehicule.Text });
+                var result = await VehiculeVM.Instance.insertVehicle(new Vehicule { date_mise_en_service = DateMES.Text, immatriculation = Immatriculation.Text, kilometrage = double.Parse(Kilometrage.Text), marque = Marque.Text, modele = Modele.Text, numero_serie = NumSerie.Text, type_vehicule = TypeVehicule.Text, numero_parc = NumParc.Text });
 
                 ModernDialog.ShowMessage(result[1], result[0], btn);
                 PieceVM.Instance.getPieces();

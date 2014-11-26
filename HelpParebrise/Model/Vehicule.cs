@@ -15,6 +15,7 @@ namespace HelpParebrise.Model
         public string immatriculation { get; set; }
         public string numero_serie { get; set; }
         public string type_vehicule { get; set; }
+        public string numero_parc { get; set; }
         public double kilometrage { get; set; }
     }
 }

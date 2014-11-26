@@ -29,38 +29,43 @@
             <TextBlock Text="CREER UN VEHICULE" Style="{StaticResource Heading1}" Margin="0,0,0,15" />
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Marque" />
+                <Label Content="Marque :" />
                 <TextBox x:Name="Marque" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Modele" />
+                <Label Content="Modele :" />
                 <TextBox x:Name="Modele" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Date de mise en service" />
+                <Label Content="Date de mise en service :" />
                 <TextBox x:Name="DateMES" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Immatriculation" />
+                <Label Content="Immatriculation :" />
                 <TextBox x:Name="Immatriculation" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Numero de serie" />
+                <Label Content="Numero de serie :" />
                 <TextBox x:Name="NumSerie" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Type de vehicule" />
+                <Label Content="Type de vehicule :" />
                 <TextBox x:Name="TypeVehicule" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Kilometrage" />
+                <Label Content="Kilometrage :" />
                 <TextBox x:Name="Kilometrage" Width="150" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numero de parc :" />
+                <TextBox x:Name="NumParc" Width="150" />
             </StackPanel>
 
             <Button x:Name="Add" Content="Ajouter" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Add_Click" />

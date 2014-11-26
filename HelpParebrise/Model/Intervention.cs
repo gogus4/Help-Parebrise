@@ -29,5 +29,6 @@ namespace HelpParebrise.Model
         public string cause_sinistre { get; set; }
         public string adresse_intervention { get; set; }
         public string date_echeance { get; set; }
+        public string assurance_impression { get; set; }
     }
 }

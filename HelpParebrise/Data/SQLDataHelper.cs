@@ -112,7 +112,8 @@ namespace HelpParebrise.Data
                         remise = double.Parse(dataReader["remise"].ToString()),
                         adresse_intervention = dataReader["adresse_intervention"].ToString(),
                         date_echeance = dataReader["date_echeance"].ToString(),
-                        indice_contact = indice_contact
+                        indice_contact = indice_contact,
+                        assurance_impression = dataReader["assurance_impression"].ToString()
                     });
                 }
 
@@ -197,7 +198,7 @@ namespace HelpParebrise.Data
         {
             try
             {
-                string query = "UPDATE intervention SET indice_client = @indice_client,indice_vehicule=@indice_vehicule, date_intervention= @date_intervention, date_facture = @date_facture, numero_facture=@numero_facture, prix_HT=@prix_HT, prix_TTC=@prix_TTC, id_tva=@id_tva, acompte=@acompte, remise=@remise, franchise = @franchise, indice_prestation=@indice_prestation, indice_mode_paiement=@indice_mode_paiement, date_sinistre=@date_sinistre, cause_sinistre=@cause_sinistre, adresse_intervention=@adresse_intervention,date_echeance=@date_echeance,bon_de_commande=@bon_de_commande,indice_contact=@indice_contact WHERE indice_intervention = @indice_intervention";
+                string query = "UPDATE intervention SET indice_client = @indice_client,indice_vehicule=@indice_vehicule, date_intervention= @date_intervention, date_facture = @date_facture, numero_facture=@numero_facture, prix_HT=@prix_HT, prix_TTC=@prix_TTC, id_tva=@id_tva, acompte=@acompte, remise=@remise, franchise = @franchise, indice_prestation=@indice_prestation, indice_mode_paiement=@indice_mode_paiement, date_sinistre=@date_sinistre, cause_sinistre=@cause_sinistre, adresse_intervention=@adresse_intervention,date_echeance=@date_echeance,bon_de_commande=@bon_de_commande,indice_contact=@indice_contact, assurance_impression = @assurance_impression WHERE indice_intervention = @indice_intervention";
                 await OpenConnection();
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -223,6 +224,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@adresse_intervention", _intervention.adresse_intervention);
                 cmd.Parameters.Add("@indice_intervention", _intervention.indice_intervention);
                 cmd.Parameters.Add("@date_echeance", _intervention.date_echeance);
+                cmd.Parameters.Add("@assurance_impression", _intervention.assurance_impression);
 
                 cmd.ExecuteNonQuery();
             }
@@ -1000,7 +1002,8 @@ namespace HelpParebrise.Data
                         marque = dataReader["marque"].ToString(),
                         modele = dataReader["modele"].ToString(),
                         numero_serie = dataReader["numero_serie"].ToString(),
-                        type_vehicule = dataReader["type_vehicule"].ToString()
+                        type_vehicule = dataReader["type_vehicule"].ToString(),
+                        numero_parc = dataReader["numero_parc"].ToString()
                     });
                 }
 
@@ -1016,7 +1019,7 @@ namespace HelpParebrise.Data
         {
             try
             {
-                string query = "INSERT INTO vehicule(marque,modele,date_mise_en_service,immatriculation,numero_serie,type_vehicule,kilometrage) VALUES(@marque,@modele,@date_mise_en_service,@immatriculation,@numero_serie,@type_vehicule,@kilometrage)";
+                string query = "INSERT INTO vehicule(marque,modele,date_mise_en_service,immatriculation,numero_serie,type_vehicule,kilometrage,numero_parc) VALUES(@marque,@modele,@date_mise_en_service,@immatriculation,@numero_serie,@type_vehicule,@kilometrage,@numero_parc)";
                 await OpenConnection();
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -1029,6 +1032,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@numero_serie", _vehicle.numero_serie);
                 cmd.Parameters.Add("@type_vehicule", _vehicle.type_vehicule);
                 cmd.Parameters.Add("@kilometrage", _vehicle.kilometrage);
+                cmd.Parameters.Add("@numero_parc", _vehicle.numero_parc);
 
                 cmd.ExecuteNonQuery();
             }
@@ -1044,7 +1048,7 @@ namespace HelpParebrise.Data
         {
             try
             {
-                string query = "UPDATE vehicule SET marque = @marque, modele = @modele, date_mise_en_service = @date_mise_en_service, immatriculation = @immatriculation, numero_serie = @numero_serie, type_vehicule=@type_vehicule, kilometrage=@kilometrage WHERE indice_vehicule = @indice_vehicule";
+                string query = "UPDATE vehicule SET marque = @marque, modele = @modele, date_mise_en_service = @date_mise_en_service, immatriculation = @immatriculation, numero_serie = @numero_serie, type_vehicule=@type_vehicule, kilometrage=@kilometrage, numero_parc = @numero_parc WHERE indice_vehicule = @indice_vehicule";
                 await OpenConnection();
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
@@ -1058,6 +1062,7 @@ namespace HelpParebrise.Data
                 cmd.Parameters.Add("@type_vehicule", _vehicle.type_vehicule);
                 cmd.Parameters.Add("@kilometrage", _vehicle.kilometrage);
                 cmd.Parameters.Add("@indice_vehicule", _vehicle.indice_vehicule);
+                cmd.Parameters.Add("@numero_parc", _vehicle.numero_parc);
 
                 cmd.ExecuteNonQuery();
             }

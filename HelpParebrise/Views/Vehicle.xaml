@@ -63,40 +63,45 @@
             <TextBlock Text="DONNEES VEHICULE" Style="{StaticResource Heading2}" Margin="0,0,0,15" />
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Marque" />
+                <Label Content="Marque :" />
                 <TextBox x:Name="Marque" Text="{Binding marque}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Modèle" />
+                <Label Content="Modèle :" />
                 <TextBox x:Name="Modele" Text="{Binding modele}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Date de mise en service" />
+                <Label Content="Date de mise en service :" />
                 <DatePicker x:Name="dateMES" Text="{Binding date_mise_en_service}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Immatriculation" />
+                <Label Content="Immatriculation :" />
                 <TextBox x:Name="Immatriculation" Text="{Binding immatriculation}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Numéro de série" />
+                <Label Content="Numéro de série :" />
                 <TextBox x:Name="numSerie" Text="{Binding numero_serie}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Type de véhicule" />
+                <Label Content="Type de véhicule :" />
                 <TextBox x:Name="TypeVehicule" Text="{Binding type_vehicule}" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label Content="Kilométrage" />
+                <Label Content="Kilométrage :" />
                 <TextBox x:Name="kilometrage" Text="{Binding kilometrage}" Width="150" />
             </StackPanel>
-            
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Numéro de parc :" />
+                <TextBox x:Name="NumParc" Text="{Binding numero_parc}" Width="150" />
+            </StackPanel>
+
             <Button x:Name="Update" Content="Modifier" HorizontalAlignment="Left" Margin="0,20,0,0" Click="Update_Click" />
         </StackPanel>
     </Grid>

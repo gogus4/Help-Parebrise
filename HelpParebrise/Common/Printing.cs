@@ -127,7 +127,10 @@ namespace HelpParebrise.Common
             myFirstPage.addText(vehicule.date_mise_en_service, 430, 611, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Immatriculation :", 255, 599, predefinedFont.csTimes, 9);
-            myFirstPage.addText(vehicule.immatriculation, 430, 599, predefinedFont.csTimes, 9);
+            myFirstPage.addText(vehicule.immatriculation, 320, 599, predefinedFont.csTimes, 9);
+
+            myFirstPage.addText("Numéro de parc :", 380, 599, predefinedFont.csTimes, 9);
+            myFirstPage.addText(vehicule.numero_parc, 450, 599, predefinedFont.csTimes, 9);
 
             myFirstPage.addText("Numéro de série :", 255, 587, predefinedFont.csTimes, 9);
             myFirstPage.addText(vehicule.numero_serie, 430, 587, predefinedFont.csTimes, 9);
@@ -146,25 +149,31 @@ namespace HelpParebrise.Common
             myFirstPage.addText(inter.bon_de_commande, 352, 536, predefinedFont.csTimes, 9);
 
             myFirstPage.addText(string.Format("Date d'intervention : {0}", inter.date_intervention), 440, 536, predefinedFont.csTimes, 9);
-            myFirstPage.addText("Assurance :", 255, 524, predefinedFont.csTimes, 9);
 
-            if(assurance_client != null)
-                myFirstPage.addText(assurance_client.nom, 430, 524, predefinedFont.csTimes, 9);
+            #region ASSURANCE
+            if (inter.assurance_impression == "Y")
+            {
+                myFirstPage.addText("Assurance :", 255, 524, predefinedFont.csTimes, 9);
 
-            myFirstPage.addText("Adresse :", 255, 512, predefinedFont.csTimes, 9);
+                if (assurance_client != null)
+                    myFirstPage.addText(assurance_client.nom, 430, 524, predefinedFont.csTimes, 9);
 
-            if (assurance_client != null)
-                myFirstPage.addText(assurance_client.adresse, 430, 512, predefinedFont.csTimes, 9);
+                myFirstPage.addText("Adresse :", 255, 512, predefinedFont.csTimes, 9);
 
-            myFirstPage.addText("N° de contrat d'assurance :", 255, 500, predefinedFont.csTimes, 9);
+                if (assurance_client != null)
+                    myFirstPage.addText(assurance_client.adresse, 430, 512, predefinedFont.csTimes, 9);
 
-            if (assurance_client != null)
-                myFirstPage.addText(assurance_client.numero_contrat, 430, 500, predefinedFont.csTimes, 9);
+                myFirstPage.addText("N° de contrat d'assurance :", 255, 500, predefinedFont.csTimes, 9);
 
-            myFirstPage.addText("Tél :", 255, 488, predefinedFont.csTimes, 9);
+                if (assurance_client != null)
+                    myFirstPage.addText(assurance_client.numero_contrat, 430, 500, predefinedFont.csTimes, 9);
 
-            if (assurance_client != null)
-                myFirstPage.addText(assurance_client.numero_telephone, 430, 488, predefinedFont.csTimes, 9);
+                myFirstPage.addText("Tél :", 255, 488, predefinedFont.csTimes, 9);
+
+                if (assurance_client != null)
+                    myFirstPage.addText(assurance_client.numero_telephone, 430, 488, predefinedFont.csTimes, 9);
+            }
+            #endregion
 
             myFirstPage.addText("Date du sinistre :", 255, 476, predefinedFont.csTimes, 9);
             myFirstPage.addText(inter.date_sinistre, 320, 476, predefinedFont.csTimes, 9);
@@ -384,7 +393,7 @@ namespace HelpParebrise.Common
             myFirstPage.drawRectangle(200, 100, 290, 85, new pdfColor(predefinedColor.csBlack), new pdfColor(218, 150, 148), 1, predefinedLineStyle.csNormal);
             myFirstPage.addText("Date d'échéance", 210, 90, predefinedFont.csTimesBold, 10, new pdfColor(predefinedColor.csBlack));
 
-            DateTime date_echeance = new DateTime(int.Parse(inter.date_intervention.Substring(6, 4)),int.Parse(inter.date_intervention.Substring(3, 2)),int.Parse(inter.date_intervention.Substring(0, 2)));
+            DateTime date_echeance = new DateTime(int.Parse(inter.date_intervention.Substring(6, 4)), int.Parse(inter.date_intervention.Substring(3, 2)), int.Parse(inter.date_intervention.Substring(0, 2)));
             date_echeance.AddDays(30);
 
             myFirstPage.drawRectangle(290, 100, 415, 85, new pdfColor(predefinedColor.csBlack), new pdfColor(218, 150, 148), 1, predefinedLineStyle.csNormal);

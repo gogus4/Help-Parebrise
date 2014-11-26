@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 
 namespace HelpParebrise.Views
 {
-    /// <summary>
-    /// Interaction logic for ControlsStyles.xaml
-    /// </summary>
     public partial class Vehicle : UserControl
     {
         public static Vehicle Instance { get; private set; }

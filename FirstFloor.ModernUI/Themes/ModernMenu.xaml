@@ -43,7 +43,7 @@
                                         <Setter.Value>
                                             <ControlTemplate TargetType="ListBoxItem">
                                                 <TextBlock DataContext="{TemplateBinding Content}"
-                                                           Text="{Binding DisplayName, Converter={StaticResource ToLowerConverter}}"
+                                                           Text="{Binding DisplayName}"
                                                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>

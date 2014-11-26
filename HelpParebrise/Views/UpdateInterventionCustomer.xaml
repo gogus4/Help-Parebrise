@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-        Title="Modifier une intervention">
+        Title="Modifier une intervention" Height="Auto" SizeToContent="Height">
 
-    <Grid Style="{StaticResource ContentRoot}" x:Name="DataInterventionGrid">
+    <Grid x:Name="DataInterventionGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
@@ -189,6 +189,11 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Date échéance" />
                 <DatePicker x:Name="date_echeance" Width="150" Text="{Binding date_echeance}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Imprimer l'assurance :" />
+                <CheckBox x:Name="AssuranceImpression" Width="150" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
