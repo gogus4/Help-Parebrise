@@ -28,9 +28,12 @@
         <Grid Grid.RowSpan="3"  x:Name="GridProgressRing" Visibility="Visible" Grid.ColumnSpan="3" Background="White" Panel.ZIndex="1">
             <mui:ModernProgressRing  HorizontalAlignment="Center" Foreground="#FFE20013" VerticalAlignment="Center" IsActive="True"  Width="80" Height="80" Style="{Binding SelectedItem.Tag, ElementName=CmbRingStyle}" />
         </Grid>
-        
-        <TextBlock Grid.Row="0" Grid.Column="0" Margin="2,0,0,0" x:Name="displayNumberCustomers" Text="10 clients enregistrés" FontSize="12"/>
 
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" Margin="2,0,0,0" >
+            <TextBlock x:Name="displayNumberCustomers" FontSize="12"/>
+            <TextBlock x:Name="displayNumberInterventions" FontSize="12"/>
+        </StackPanel>
+        
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="5,0,0,0" Orientation="Horizontal">
             <TextBox x:Name="SearchCustomer" Width="182" Height="25" Grid.Column="0" TextChanged="SearchCustomers_TextChanged"/>
 
@@ -96,7 +99,7 @@
                                 <TextBlock FontSize="36" FontWeight="Bold">
                                     <Run Text="{Binding nb_interventions}" />
                                 </TextBlock>
-                            </Grid> 
+                            </Grid>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>

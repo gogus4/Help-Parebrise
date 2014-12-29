@@ -1,5 +1,4 @@
 ﻿using FirstFloor.ModernUI.Windows.Controls;
-using HelpParebrise.Common;
 using HelpParebrise.Data;
 using HelpParebrise.Model;
 using HelpParebrise.ViewModel;
@@ -7,18 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace HelpParebrise.Views
 {
@@ -30,7 +20,7 @@ namespace HelpParebrise.Views
         {
             InitializeComponent();
 
-            Instance = this; 
+            Instance = this;
 
             #region THREAD
             BackgroundWorker _backgroundWorker = new BackgroundWorker();
@@ -44,7 +34,7 @@ namespace HelpParebrise.Views
         void LoadCustomersData(object sender, DoWorkEventArgs e)
         {
             InterventionVM.Instance.getInterventions();
-            CustomerVM.Instance.getCustomers();         
+            CustomerVM.Instance.getCustomers();
             ContactVM.Instance.getContacts();
             InsuranceVM.Instance.getInsurances();
         }
@@ -66,7 +56,9 @@ namespace HelpParebrise.Views
                 interventionsDataGrid.ItemsSource = inter;
             }
 
-            displayNumberCustomers.Text = CustomerVM.Instance.Customers.Count + " clients enregistrés";
+            displayNumberCustomers.Text = CustomerVM.Instance.Customers.Count + " clients";
+            displayNumberInterventions.Text = " dont " + InterventionVM.Instance.Interventions.Count + " interventions";
+
         }
 
         private void SearchCustomers_TextChanged(object sender, TextChangedEventArgs e)
@@ -186,7 +178,7 @@ namespace HelpParebrise.Views
             Client customer = (Client)listCustomers.SelectedItem;
 
             MessageBoxButton btn = MessageBoxButton.YesNo;
-            var result = ModernDialog.ShowMessage("Etes-vous sur de vouloir supprimer le client " + customer.nom , "Suppression du client " + customer.nom, btn);
+            var result = ModernDialog.ShowMessage("Etes-vous sur de vouloir supprimer le client " + customer.nom, "Suppression du client " + customer.nom, btn);
 
             if (result == MessageBoxResult.Yes)
             {
